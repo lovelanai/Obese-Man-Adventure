@@ -1,0 +1,135 @@
+.start-logo{
+    font-size: 50px;
+    background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+    color: rgba(0, 128, 0, 0);
+    -webkit-background-clip: text;
+    animation: animate 5s linear infinite;
+    background-size: 1000%;
+}
+
+
+.background-music{
+    background-color: hotpink;
+}
+
+button {
+background-color: transparent;
+border: none;
+}
+
+button :hover{
+    filter: invert();
+    border-collapse: separate;
+    cursor: pointer;
+    -webkit-animation: blink-text 200ms linear infinite;
+    -moz-animation: blink-text 200ms linear infinite;
+    -ms-animation: blink-text 200ms linear infinite;
+    -o-animation: blink-text 200ms linear infinite;
+    animation: blink-text 200ms linear infinite;
+}
+
+.start-coin{
+    font-size: 15px;
+    color: rgb(255, 72, 0);
+    background-color: transparent;
+    -webkit-animation: blink-text 800ms linear infinite;
+    -moz-animation: blink-text 800ms linear infinite;
+    -ms-animation: blink-text 800ms linear infinite;
+    -o-animation: blink-text 800ms linear infinite;
+    animation: blink-text 800ms linear infinite;
+}
+
+
+@keyframes animate{
+    
+    0%
+    {
+        background-position: 0% 100%;
+    }
+    50%
+    {
+        background-position: 100% 100%;
+    }
+    100%
+    {
+        background-position: 0% 100%;
+    }
+}
+
+
+@-webkit-keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    50.01% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+

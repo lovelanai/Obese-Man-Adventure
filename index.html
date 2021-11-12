@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <script src="https://kit.fontawesome.com/caac8701c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <style></style>
+    <link rel="stylesheet" href="start.css">
+
+    
 </head>
 <body>
     <header>
@@ -26,7 +29,28 @@
     <main>
         <div class="game-container">
         <div class="game-box">
-            <h1 class="start-logo">START!</h1>
+
+            <div class="game-content">
+
+
+                
+     <div style="margin: 4rem;">
+        <audio id="audio">
+            <source src="assets/music/Mario-coin-sound.mp3" type="audio/mpeg">
+        </audio>
+            <button id="playPauseBTN" onclick="playPause()">
+                <h1 class="start-logo">START</h1></button>
+            </div>
+
+            <div>
+                <p class="start-coin">INSERT COIN</p>
+            </div>
+
+        </div>
+        </div>
+
+    
+
         </div>
     </div>
     </main>
