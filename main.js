@@ -15,6 +15,14 @@ downsound.src = "/assets/music/Arcade game over original meme Sound Effect _ Com
 var among = new Audio();
 among.src = "/assets/music/amongus.mp3";
 
+var hit = new Audio();
+hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
+
+var magicstart = new Audio();
+magicstart.src = "/assets/music/Magic Game Start Sound Effect.mp3";
+
+
+
 function firstfunction(){
 var myobj = document.getElementById("firstfunction");
 myobj.remove();

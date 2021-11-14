@@ -44,7 +44,7 @@
         <div id="game" style="background-color: rgb(255, 206, 115); display: none; " class="container">
 
             <button class="start-coin" id="musicbtn" onclick="openMusic();">
-                <a onmousedown="song.play()">WARNING EXPLICIT CONTENT, CLICK TO CONTINUE</a>
+                <a onmousedown="hit.play(); song.play()">WARNING EXPLICIT CONTENT, CLICK TO CONTINUE</a>
             </button>
 
             <div style="display: none;" class="gamemenu" id="gamemenu">
@@ -85,9 +85,8 @@
                         </button>
                     </a>
 
-
                     <button id="entergame" class="text-color-effect" style="display: none; border: none; margin: 3rem;"
-                        onmousedown="song.pause(); among.play()">
+                        onmousedown="song.pause(); among.play(); magicstart.play(); ">
                         <h1>
                             ENTER GAME
                         </h1>

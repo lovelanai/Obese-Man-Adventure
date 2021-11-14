@@ -26,3 +26,7 @@ function house() {
 
 var spooky = new Audio();
 spooky.src = "/assets/music/Kevin MacLeod - 8bit Dungeon Level.mp3";
+
+
+var hit = new Audio();
+hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
