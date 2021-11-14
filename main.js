@@ -9,6 +9,18 @@ song.src = "/assets/music/Jeremy Blake - Powerup!.mp3";
 var slurp = new Audio();
 slurp.src = "/assets/music/Mario Warp Pipe Sound Effect.mp3";
 
+var downsound = new Audio();
+downsound.src = "/assets/music/Arcade game over original meme Sound Effect _ Comedy sound _ Funny sound effect _.mp3";
+
+var among = new Audio();
+among.src = "/assets/music/amongus.mp3";
+
+function firstfunction(){
+var myobj = document.getElementById("firstfunction");
+myobj.remove();
+document.getElementById('gamepage').style.display = "block";
+}
+
 
 function myFunction() {
     var myobj = document.getElementById("startbtn");
@@ -66,12 +78,15 @@ function myFunction() {
       }, 1000, function() {
         target.remove();
       });
+            document.getElementById('start-text').style.display = "flex";
     }
-function entergametext(){
-    document.getElementById('start-text').style.display = "flex";}
+
+
   
 
     function stop() {
       song.pause();
       song.currentTime = 0;
     }
+
+
