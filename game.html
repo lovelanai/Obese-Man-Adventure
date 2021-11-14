@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+
+
+</head>
+<body>
+
+
+
+    <main>
+
+
+          <div id="startbtn"  class="container">
+
+                
+     
+        <audio id="audio">
+            <source src="assets/music/Mario-coin-sound.mp3" type="audio/mpeg">
+        </audio>
+            <button  onclick="myFunction()" class="start-logo">
+                <a class="start-logo, text-color-effect" onmousedown="bleep.play()" >START</a></button>
+    
+
+            <div>
+                <p class="start-coin">INSERT COIN</p>
+            </div>
+
+
+
+
+
+      
+
+        </div>
+
+        <div id="game" style="background-color: rgb(255, 206, 115); display: none; " class="container">
+
+            <button class="start-coin" id="musicbtn" onclick="openMusic();">
+                <a onmousedown="song.play()">WARNING EXPLICIT CONTENT, CLICK TO CONTINUE</a>
+            </button>
+
+            <div style="display: none;" class="gamemenu" id="gamemenu">
+
+         
+ 
+                <div style="display: flex; position: absolute; top: 0;">
+ 
+                    <div style=" font-size: 20px;  margin-top: 2rem; display: flex; justify-content: center; align-items: center; flex-direction: column;" >
+                <div class="logo">
+                    <h2>OBESE-MAN</h2>
+                </div>
+                <div class="logo">
+                    <h3>ADVENTURE</h3>
+                </div>
+                <div class="logo">
+                    <h2>IV</h2>
+                </div>
+            </div>
+            </div>
+            
+            <div style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center; display: flex; align-items: center;
+            justify-content: center; flex-direction: column;">
+            
+            <a onmousedown="slurp.play()" >
+            <button id="entername" onclick="entername()" style="background-color: transparent; border: none; color: #FF8220; margin: 3rem;">
+              
+
+                
+                <h1 >
+                    BEGIN ADVENTURE
+                </h1>
+
+
+        
+            </button>
+        </a>
+
+
+            <button id="entergame" onclick="entergametext()" class="text-color-effect"  style="display: none; border: none; margin: 3rem;" onmousedown="song.pause()">
+                <h1 >
+                    ENTER GAME
+                </h1>
+            </button>
+            <p id="demo" style="font-size: 14px; color: rgb(255, 0, 0);"></p>
+        
+
+
+
+            </div>
+            
+            <div style="display: flex; position: absolute; 
+            left: 0; margin: 3rem;">
+                        <img style="height: 600px;" src="assets/img/obeseman.png" alt="">
+                    </div>
+            
+                    <div style="display: flex; position: absolute; 
+            right: 0; margin: 3rem;">
+                        <img style="height: 600px;" src="assets/img/obeseman.png" alt="">
+                    </div>
+            
+
+</div>
+
+            </div>
+
+            <div id="start-text" style="display: none;  height: 100vh; justify-content: center; align-items: center;">
+        
+                    <a class="geet" style="color: white;" onmousedown="song.play()">Outside of the Evil Mansion, MEDIEINSTITUTET...</a>
+            </div>
+
+                
+     
+      
+
+
+
+
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="main.js"></script>
+</body>
+</html>

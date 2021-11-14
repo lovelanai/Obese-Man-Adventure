@@ -18,6 +18,8 @@ header {
     background-color: rgb(0, 0, 0);
 }
 
+
+
 .logo {
     background-image: url(https://previews.123rf.com/images/pskov/pskov1711/pskov171100040/90065725-pixel-art-dithering-background-in-red-and-orange-color-.jpg);
     padding: 0.5rem;
@@ -51,11 +53,13 @@ main {
 }
 
 
-.game-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+.game-content{
     height: 100%;
+    width: 100%;
+}
+
+
+.game{
+    height: 100%;
+    width: 100%;
 }

@@ -1,5 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: pixel;
+}
+@font-face {
+    font-family: pixel;
+    src: url(/font/PressStart2P.ttf);
+}
+.container{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+
 .start-logo{
+    padding: 3rem;
     font-size: 50px;
+
+
+}
+
+.text-color-effect{
     background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
     color: rgba(0, 128, 0, 0);
     -webkit-background-clip: text;
@@ -8,16 +34,12 @@
 }
 
 
-.background-music{
-    background-color: hotpink;
-}
-
-button {
-background-color: transparent;
+.start-logo {
+background-color:transparent;
 border: none;
 }
 
-button :hover{
+button:hover { 
     filter: invert();
     border-collapse: separate;
     cursor: pointer;
@@ -29,15 +51,38 @@ button :hover{
 }
 
 .start-coin{
+    color: tomato;
     font-size: 15px;
-    color: rgb(255, 72, 0);
+
     background-color: transparent;
+    border: none;
+
+
     -webkit-animation: blink-text 800ms linear infinite;
     -moz-animation: blink-text 800ms linear infinite;
     -ms-animation: blink-text 800ms linear infinite;
     -o-animation: blink-text 800ms linear infinite;
     animation: blink-text 800ms linear infinite;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes animate{
@@ -133,3 +178,70 @@ button :hover{
 }
 
 
+
+.gamemenu{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url(/assets/img/background.jpg);
+    background-repeat: repeat;
+}
+
+.logo {
+
+    background-image: url(https://previews.123rf.com/images/pskov/pskov1711/pskov171100040/90065725-pixel-art-dithering-background-in-red-and-orange-color-.jpg);
+padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 166, 0, 0);
+    -webkit-background-clip: text;
+    background-size: 3%;
+    font-size: 25px;
+}
+
+.beginbtn{
+    width: 40rem;
+    height: 20rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+    animation: animate 5s linear infinite;
+    background-size: 1000%;
+
+}
+
+
+
+
+
+.geet {
+    border-right: solid 2px rgba(0, 0, 0, 0.75);
+white-space: nowrap;
+overflow: hidden;    
+font-size: 20px;
+color: rgba(0, 0, 0, 0.7);
+margin: 0 auto;
+    animation: animated-text 3s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 940px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0, 0, 0, 0.75);}
+    to{border-right-color: transparent;}
+  }
