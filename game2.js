@@ -30,3 +30,25 @@ spooky.src = "/assets/music/Kevin MacLeod - 8bit Dungeon Level.mp3";
 
 var hit = new Audio();
 hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
+
+
+
+function nextpage() {
+
+  var myobj = document.getElementById("textone");
+  myobj.remove();
+
+  document.getElementById('texttwo').style.display = "flex";
+
+}
+
+
+function closepage() {
+
+  var myobj = document.getElementById("texttwo");
+  myobj.remove();
+
+  document.getElementById('arrow').style.display = "flex";
+
+}
+
