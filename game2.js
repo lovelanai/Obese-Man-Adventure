@@ -52,3 +52,27 @@ function closepage() {
 
 }
 
+
+$(document).ready(function() {
+    var target = $("#house");
+    $("#arrow").click(function() {
+      removeElement(target);
+    });
+  });
+  
+  function removeElement(target) {
+    target.animate({
+      opacity: "-=1"
+    }, 1000, function() {
+      target.remove();
+    });
+  }
+
+function gotogamethree(){
+  document.getElementById('scenetwo').style.display = "flex";
+}
+
+function stop() {
+  spooky.pause();
+  spooky.currentTime = 0;
+}

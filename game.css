@@ -27,6 +27,7 @@
     background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
     color: rgba(0, 128, 0, 0);
     -webkit-background-clip: text;
+    background-clip: text;
     animation: animate 5s linear infinite;
     background-size: 1000%;
 }

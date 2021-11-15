@@ -42,7 +42,7 @@
 }
 
 button:hover {
-    
+    filter: invert();
     border-collapse: separate;
     cursor: pointer;
     -webkit-animation: blink-text 800ms linear infinite;
