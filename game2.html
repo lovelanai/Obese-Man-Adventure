@@ -12,6 +12,7 @@
 
 <body>
 
+
     <div id="lore" class="flex column justify-center align-center fullscreen backblack">
 
         <div class="interlude flex align-center justify-center maxwidth maxheight column">
@@ -21,7 +22,7 @@
                 MEDIEINSTITUTET...</a>
 
             <div>
-                <button id="continue" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="house()">
+                <button id="geet" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="geet()">
                     <p>continue</p>
                 </button>
             </div>
@@ -31,58 +32,103 @@
 
     </div>
 
-    <div id="house" class="none column fullscreen justify-center align-center backblack">
+
+    <div id="gamefullscreen" class="column none fullscreen justify-center align-center backblack">
+
+        <div style="position: absolute; top: 0; z-index: 20;"><button onclick="openFullscreen()">RETURN TO FULLSCREEN</button></div>
 
 
 
         <div class="flex maxheight maxwidth column absolute"
-            style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
+            style="background-image: url(/assets/img/medieinstitutet.png); background-size: cover;">
 
             <div class="relative maxheight maxwidth flex align-end justify-start">
 
-                <div id="textone" class="flex align-center"
+                <div id="s2textone" class="flex align-center"
                     style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
                     <div style="margin: 1rem;">
                         <span id="text" class="type" style="--n:103"></span>
                     </div>
-                    <button class="absolute z1" onclick="nextpage()" style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+                    <button class="absolute z1" onclick="s2nextpage()"
+                        style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
                 </div>
 
 
-                <div class="none align-center" id="texttwo"
+                <div class="none align-center" id="s2texttwo"
                     style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
                     <div style="margin: 1rem;">
 
                         <span id="text" class="type" style="--n:103;"></span>
                     </div>
 
-                    <button class="absolute z1" onclick="closepage()" style=" margin: 33rem; margin-top: 42rem">GO
+                    <button class="absolute z1" onclick="s2closepage()" style=" margin: 33rem; margin-top: 42rem">GO
                         -></button>
                 </div>
 
 
 
-                <div class="arrow absolute z1 none" id="arrow" onclick="gotogamethree()">
+                <div style="margin-left:13rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow1" onclick="gotogamethree()">
 
                     <button class="maxheight maxwidth backtrans border0">
+                        <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                    </button>
+                </div>
+
+
+                <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="absolute z1 none" id="s2arrow2">
+
+                    <button class="maxheight maxwidth backtrans border0" onclick="showelevatorpic()">
                         <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
                     </button>
                 </div>
 
 
+                <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3" onclick="gotogamethree()">
+
+                    <button class="maxheight maxwidth backtrans border0">
+                        <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                    </button>
+                </div>
+
+
+
+
 
             </div>
 
+
+
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                </div>
+            </div>
+        
+
+            <div style="display: flex; justify-content: flex-end;">
+                <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onclick="openNav()">
+                <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+            </div>
         </div>
 
 
 
 
-        <div class="maxheight maxwidth relative flex justify-end align-center">
+        <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
+            <img id="changepicture" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
+            <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
 
-            <img style="height: 40rem; width: 17rem;" src="/assets/img/inventory.png" alt="">
-
+            <div id="s2picturetext" class="flex absolute"
+            style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815); bottom: 0; left: 0;">
+            <div style="margin: 1rem;">
+                <span id="text" class="type" style="--n:103"></span>
+            </div>
+            <button  class="absolute z1" onclick="changepicture()"
+                style=" bottom: 20px; right: 20px">NEXT-></button>
         </div>
+
+                    </div>
 
     </div>
 
@@ -91,10 +137,15 @@
     </div>
 
 
-    <iframe id="scenetwo" class="game none fullscreen max-width" src="game3.html" frameborder="0"></iframe>
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="game2.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

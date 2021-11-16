@@ -189,3 +189,60 @@ button:hover {
     width: 20rem;
     border: 7px solid #FF8220;
 }
+
+
+
+
+
+
+
+.overlaydemo{
+    height: 40rem;
+    width: 17rem;
+    position: absolute;
+    z-index: 2;
+    right: -20rem;
+    background-color:transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+    -webkit-animation: actiondemo 1.5s infinite alternate;
+    animation: actiondemo 1.5s infinite alternate;
+}
+
+
+.overlaydemo a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+}
+
+
+
+.overlaydemo .closebtn {
+
+    position: absolute;
+    top: 9px;
+    right: 206px;
+    font-size: 40px;
+    color: #FF7E00;
+}
+
+@-webkit-keyframes actiondemo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20rem);
+    }
+}
+
+@keyframes actiondemo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20rem);
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body 
+
+        .overlaydemo{
+            height: 40rem;
+            width: 17rem;
+            position: absolute;
+            z-index: 2;
+            top: 4rem;
+            right: -20rem;
+            background-color:transparent;
+            overflow-x: hidden;
+            transition: 0.5s;
+            -webkit-animation: actiondemo 1.5s infinite alternate;
+            animation: actiondemo 1.5s infinite alternate;
+        }
+
+
+        .overlaydemo a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            display: block;
+            transition: 0.3s;
+        }
+
+
+
+        .overlaydemo .closebtn {
+
+            position: absolute;
+            top: 9px;
+            right: 206px;
+            font-size: 40px;
+            color: #FF7E00;
+        }
+
+
+
+
+
+
+
+
+@-webkit-keyframes actiondemo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20rem);
+    }
+}
+
+@keyframes actiondemo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20rem);
+    }
+}
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="myNav" class="overlaydemo">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-contentdemo">
+            <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+        </div>
+    </div>
+
+    <h2>Fullscreen Overlay Nav Example</h2>
+    <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+    <p>In this example, the navigation menu will slide in, from left to right:</p>
+
+    <div style="display: flex; justify-content: flex-end;">
+        <span style="cursor: pointer; height:10rem; width: 4rem;" onclick="openNav()">
+        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "17rem";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+</body>
+
+</html>

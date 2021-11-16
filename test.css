@@ -1,0 +1,64 @@
+
+
+
+  body #wrap {
+    width: 600px;
+    height: 60px;
+    position: relative;
+  }
+
+
+
+  body #wrap input, body #wrap div {
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    width: 25%;
+    left: 75%;
+    top: 0;
+  }
+  body #wrap input.pipe, body #wrap div.pipe {
+    background: linear-gradient(to bottom, #01a500 75%, #73ff72 75%, #73ff72 85%, #01a500 85%);
+    box-shadow: inset 0 0 0 5px #222;
+    transition: 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+
+
+
+
+  body #wrap input.email, body #wrap input.field, body #wrap div.email, body #wrap div.field {
+    width: 75%;
+    left: 0;
+  }
+
+
+  body #wrap input.pipe:after, body #wrap div.pipe:after {
+    content: "SUBMIT";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 1s, 0s;
+  }
+
+
+
+
+
+
+  body #wrap input.field:before, body #wrap div.field:before {
+    content: "";
+    transition: 0.75s ease-in-out;
+    position: absolute;
+    width: calc(100% + 5px);
+    height: 100%;
+    box-shadow: inset 0 0 0 5px #222;
+    left: 0;
+    top: 0;
+    background: #fff;
+  }

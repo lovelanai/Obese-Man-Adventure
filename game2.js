@@ -1,91 +1,85 @@
-function changetext(text) { 
-const paragraph = document.getElementById("text")
-paragraph.innerText = text;
-}
-
-
 
 
 $(document).ready(function () {
-    var target = $("#lore");
-    $("#continue").click(function () {
-        removeElement(target);
-    });
+  var target = $("#lore");
+  $("#geet").click(function () {
+      removeElement(target);
+  });
 });
 
 function removeElement(target) {
-    target.animate({
-        opacity: "-=1"
-    }, 1000, function () {
-        target.remove();
-    });
+  target.animate({
+      opacity: "-=1"
+  }, 1000, function () {
+      target.remove();
+  });
 
 }
 
-function house() {
-    var myobj = document.getElementById("continue");
+function geet() {
+  var myobj = document.getElementById("geet");
 
 
-    document.getElementById('house').style.display = "flex";
+  document.getElementById('gamefullscreen').style.display = "flex";
 
-    changetext("This is it. Finally we can face the evil MC.SLIM! He will soon regret stealing my lunch 10 years ago.")
-
-
-
+  changetext ("David that bastard is upstairs... He probably still have some of my baloney sandwitch between his teeth..")
 }
 
-var spooky = new Audio();
-spooky.src = "/assets/music/Kevin MacLeod - 8bit Dungeon Level.mp3";
 
 
-var hit = new Audio();
-hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
-
-
-
-function nextpage() {
-
-  var myobj = document.getElementById("textone");
+function s2nextpage() {
+      
+  var myobj = document.getElementById("s2textone");
   myobj.remove();
 
-  document.getElementById('texttwo').style.display = "flex";
+  document.getElementById('s2texttwo').style.display = "flex";
 
-  changetext("Let's enter the evil mansion and kick him in the sack!")
+  changetext ("For now I'm way to fat to take the stairs.. Let's find another way up!...")
  
 
 }
 
 
-function closepage() {
-
-  var myobj = document.getElementById("texttwo");
+function s2closepage(){
+      
+  var myobj = document.getElementById("s2texttwo");
   myobj.remove();
 
-  document.getElementById('arrow').style.display = "flex";
+  document.getElementById('s2arrow1').style.display = "flex";
+  document.getElementById('s2arrow2').style.display = "flex";
+  document.getElementById('s2arrow3').style.display = "flex";
 
 }
 
-
-$(document).ready(function() {
-    var target = $("#house");
-    $("#arrow").click(function() {
-      removeElement(target);
-    });
-  });
-  
-  function removeElement(target) {
-    target.animate({
-      opacity: "-=1"
-    }, 1000, function() {
-      target.remove();
-    });
-  }
-
-function gotogamethree(){
-  document.getElementById('scenetwo').style.display = "flex";
+function openNav() {
+  document.getElementById("myNav").style.width = "17rem";
 }
 
-function stop() {
-  spooky.pause();
-  spooky.currentTime = 0;
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+function showelevatorpic() {
+  var myobj = document.getElementById("elevatorpic");
+
+
+  document.getElementById('elevatorpic').style.display = "flex";
+
+  changetext ("That bastard! He must have known I was coming... ")
+
+
+}
+
+function changepicture(){
+  var myobj = document.getElementById("brokenframe");
+
+
+  document.getElementById('brokenframe').style.display = "flex";
+
+  changetext ("Lets kill that BASTARD ")
+
+  var myobj = document.getElementById("changepicture");
+  myobj.remove();
+
 }

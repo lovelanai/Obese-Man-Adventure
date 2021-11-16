@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="reusable.css">
+    <link rel="stylesheet" href="game2.css">
 
 
 </head>
@@ -97,7 +98,7 @@
 
                     <input id="userinput" class="nameinput" type="entername"> 
                     <div class="flex" style="width: 5rem;  border: 7px solid #FF8220;">
-                    <button  class="maxwidth backblack border0" onclick="entername()" style=" color: #01FDFD;" >ENTER</button>
+                    <button  class="maxwidth backblack border0" onclick="entername()" onmousedown="warp.play()" style=" color: #01FDFD;" >ENTER</button>
                 </div>
                 </div>
             </div>
@@ -105,7 +106,7 @@
 
 
                     <button id="entergame" class="text-color-effect none border0" style="margin: 3rem;"
-                        onmousedown="song.pause(); among.play(); magicstart.play(); ">
+                        onmousedown="song.pause(); among.play(); magicstart.play(); " onclick="scenetwo()">
                         <h1>
                             ENTER GAME
                         </h1>
@@ -133,7 +134,108 @@
 
 
 
-        <iframe id="start-text" class="game maxwidth none fullscreen" src="game2.html" frameborder="0"></iframe>
+
+
+
+       
+       
+       <div id="start-text" style="display: none;">
+       
+       
+        <div id="lore" class="flex column justify-center align-center fullscreen backblack">
+
+            <div class="interlude flex align-center justify-center maxwidth maxheight column">
+    
+    
+                <a class="interlude" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the Evil Mansion,
+                    MEDIEINSTITUTET...</a>
+    
+                <div>
+                    <button id="continue" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="house()">
+                        <p>continue</p>
+                    </button>
+                </div>
+    
+            </div>
+    
+    
+        </div>
+    
+        <div id="house" class="none column fullscreen justify-center align-center backblack">
+    
+    
+    
+            <div class="flex maxheight maxwidth column absolute"
+                style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
+    
+                <div class="relative maxheight maxwidth flex align-end justify-start">
+    
+                    <div id="textone" class="flex align-center"
+                        style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                        <div style="margin: 1rem;">
+                            <span id="text" class="type" style="--n:103"></span>
+                        </div>
+                        <button class="absolute z1" onclick="nextpage()" style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+                    </div>
+    
+    
+                    <div class="none align-center" id="texttwo"
+                        style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                        <div style="margin: 1rem;">
+    
+                            <span id="text" class="type" style="--n:103;"></span>
+                        </div>
+    
+                        <button class="absolute z1" onclick="closepage()" style=" margin: 33rem; margin-top: 42rem">GO
+                            -></button>
+                    </div>
+    
+    
+    
+                    <div class="arrow absolute z1 none" id="arrow" onclick="gotogamethree()">
+    
+                        <button class="maxheight maxwidth backtrans border0">
+                            <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                        </button>
+                    </div>
+    
+    
+    
+                </div>
+    
+            </div>
+    
+    
+    
+    
+            <div id="myNav" class="overlaydemo">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-contentdemo">
+                    <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                </div>
+            </div>
+        
+
+            <div style="display: flex; justify-content: flex-end; height: 100%; width: 100%;">
+                <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onclick="openNav()">
+                <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+            </div>
+        </div>
+    
+
+
+
+    
+    
+
+
+    </div>
+
+    </div>
+
+    <iframe id="scenetwo" class="flex game none fullscreen maxwidth" src="game2.html" frameborder="0"></iframe>
+
+        </main>
 
 
 
@@ -141,6 +243,8 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="main.js"></script>
+        <script src="game2.js"></script>
+ 
 </body>
 
 </html>
