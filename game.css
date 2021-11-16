@@ -19,7 +19,7 @@
 }
 
 .start-logo {
-    padding: 3rem;
+    margin: 3rem;
     font-size: 50px;
 }
 
@@ -165,6 +165,7 @@ button:hover {
     flex-direction: column;
     color: rgba(255, 166, 0, 0);
     -webkit-background-clip: text;
+    background-clip: text;
     background-size: 3%;
     font-size: 25px;
 }
@@ -179,4 +180,12 @@ button:hover {
     background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
     animation: animate 5s linear infinite;
     background-size: 1000%;
+}
+
+
+.nameinput{
+ 
+    height: 2rem;
+    width: 20rem;
+    border: 7px solid #FF8220;
 }

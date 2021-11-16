@@ -7,83 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="game2.css">
+    <link rel="stylesheet" href="reusable.css">
 </head>
 
 <body>
 
-    <div id="lore"
-        style=" display: flex; flex-direction: column; height: 100vh; justify-content: center; align-items: center; background-color: black">
-        <div class="geet" style="display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%; flex-direction: column">
+    <div id="lore" class="flex column justify-center align-center fullscreen backblack">
+
+        <div class="interlude flex align-center justify-center maxwidth maxheight column">
 
 
-            <a class="geet" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the
-                Evil Mansion, MEDIEINSTITUTET...</a>
+            <a class="interlude" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the Evil Mansion,
+                MEDIEINSTITUTET...</a>
+
             <div>
                 <button id="continue" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="house()">
                     <p>continue</p>
                 </button>
             </div>
-            <div>
+
+        </div>
+
+
+    </div>
+
+    <div id="house" class="none column fullscreen justify-center align-center backblack">
+
+
+
+        <div class="flex maxheight maxwidth column absolute"
+            style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
+
+            <div class="relative maxheight maxwidth flex align-end justify-start">
+
+                <div id="textone" class="flex align-center"
+                    style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                    <div style="margin: 1rem;">
+                        <span id="text" class="type" style="--n:103"></span>
+                    </div>
+                    <button class="absolute z1" onclick="nextpage()" style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+                </div>
+
+
+                <div class="none align-center" id="texttwo"
+                    style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                    <div style="margin: 1rem;">
+
+                        <span id="text" class="type" style="--n:103;"></span>
+                    </div>
+
+                    <button class="absolute z1" onclick="closepage()" style=" margin: 33rem; margin-top: 42rem">GO
+                        -></button>
+                </div>
+
+
+
+                <div class="arrow absolute z1 none" id="arrow" onclick="gotogamethree()">
+
+                    <button class="maxheight maxwidth backtrans border0">
+                        <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                    </button>
+                </div>
+
+
 
             </div>
+
         </div>
 
 
-    </div>
-
-    <div id="house"
-        style=" display: none; flex-direction: column; height: 100vh; justify-content: center; align-items: center; background-color: black">
 
 
+        <div class="maxheight maxwidth relative flex justify-end align-center">
 
-        <div style=" display: flex;
-    height: 100%;
-    width: 100%; flex-direction: column; position: absolute; background-image: url(/assets/img/house.jpeg); background-size: cover;">
-          
-          <div style="position: relative ;height: 100%; width:100%; display: flex; align-items: flex-end; justify-content: flex-start;" >
+            <img style="height: 40rem; width: 17rem;" src="/assets/img/inventory.png" alt="">
 
-            <div id="textone" style=" margin: 4rem ;height: 12rem; width: 40rem; display: flex; align-items: center;  background-color: rgba(0, 0, 0, 0.815);  ">
-                <div style="margin: 1rem;">
-     <span  class="type" style="--n:103">This is it. Finally we can face the evil MC.SLIM! He will soon regret stealing my lunch 10 years ago.</span>
-    </div>
-    <button onclick="nextpage()" style=" position: absolute; z-index: 1; margin: 33rem; margin-top: 42rem">NEXT -></button>
-    </div>
-
-
-    <div id="texttwo"  style=" margin: 4rem ;height: 12rem; width: 40rem; display: none; align-items: center;  background-color: rgba(0, 0, 0, 0.815);  ">
-        <div style="margin: 1rem;">
-
-<span class="type" style="--n:103;" >Let's enter the evil mansion and kick him in the sack!</span>
-</div>
-<button onclick="closepage()" style=" position: absolute; z-index: 1; margin: 33rem; margin-top: 42rem">GO -></button>
-</div>
-
-
-
-<div class="arrow" id="arrow" onclick="gotogamethree()" style="position: absolute; z-index: 1; height: 7rem; width: 5rem; display: none; margin-left: 24rem; margin-bottom: 1rem;">
-
-    <button style="height: 100%; width: 100%; background-color: transparent; border: none;">
-        <img style="height: 100%; width: 100%;" src="/assets/img/PinClipart.png" alt="">
-    </button>
-</div>
-    
-
-    
-</div>
-        
-        </div>
-
-
-        
-
-        <div style="height: 100%; width: 100%; position: relative; display: flex; justify-content: flex-end; align-items: center;">
-         
-            <img style="height: 26rem; width: 12rem" src="/assets/img/inventory.png" alt="">
-    
         </div>
 
     </div>
@@ -93,11 +91,10 @@
     </div>
 
 
-    <iframe id="scenetwo" class="game" src="game3.html" frameborder="0" style="display: none; height: 100vh; width: 100%;"></iframe>
+    <iframe id="scenetwo" class="game none fullscreen max-width" src="game3.html" frameborder="0"></iframe>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="game2.js"></script>
 </body>
 
 </html>
-

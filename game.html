@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="reusable.css">
 
 
 </head>
@@ -15,7 +16,7 @@
 
 
 
-    <main>
+    <main id="gamefullscreen">
 
 
         <div id="startbtn" class="container">
@@ -25,8 +26,8 @@
             <audio id="audio">
                 <source src="assets/music/Mario-coin-sound.mp3" type="audio/mpeg">
             </audio>
-            <button onclick="myFunction()" class="start-logo">
-                <a class="start-logo, text-color-effect" onmousedown="bleep.play()">START</a></button>
+            <button onmousedown="bleep.play()" onclick="myFunction()" class="start-logo">
+                <a class="start-logo, text-color-effect" >START</a></button>
 
 
             <div>
@@ -41,20 +42,20 @@
 
         </div>
 
-        <div id="game" style="background-color: rgb(255, 206, 115); display: none; " class="container">
+        <div id="game" style="background-color: rgb(255, 206, 115); " class="container none">
 
-            <button class="start-coin" id="musicbtn" onclick="openMusic();">
-                <a onmousedown="hit.play(); song.play()">WARNING EXPLICIT CONTENT, CLICK TO CONTINUE</a>
+            <button class="start-coin" id="musicbtn" onclick="openMusic();openFullscreen()">
+                <a onmousedown="hit.play(); song.play()">SOUND ON + FULLSCREEN</a>
             </button>
 
-            <div style="display: none;" class="gamemenu" id="gamemenu">
+            <div class="gamemenu none" id="gamemenu">
 
 
 
-                <div style="display: flex; position: absolute; top: 0;">
+                <div class="absolute flex" style="top: 88px;">
 
-                    <div
-                        style=" font-size: 20px;  margin-top: 2rem; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                    <div class="flex justify-center align-center column"
+                        style=" font-size: 20px;  margin-top: 2rem;">
                         <div class="logo">
                             <h2>OBESE-MAN</h2>
                         </div>
@@ -67,12 +68,14 @@
                     </div>
                 </div>
 
-                <div style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center; display: flex; align-items: center;
-            justify-content: center; flex-direction: column;">
+                <div class="flex align-center justify-center column" style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center;">
 
-                    <a onmousedown="slurp.play()">
-                        <button id="entername" onclick="entername()"
-                            style="background-color: transparent; border: none; color: #FF8220; margin: 3rem;">
+
+
+
+
+                    <a  onmousedown="slurp.play()">
+                        <button id="begin" onclick="begin()" class="backtrans border0" style="color: #FF8220; margin: 3rem;">
 
 
 
@@ -85,7 +88,23 @@
                         </button>
                     </a>
 
-                    <button id="entergame" class="text-color-effect" style="display: none; border: none; margin: 3rem;"
+
+                    <div class="none" id="nameinput">
+                    <div class="absolute" style=" top: 28rem; left: 38rem; color: #FF8220;">
+                        <h1>ENTER YOUR NAME</h1>
+                    </div>
+                <div class="flex">
+
+                    <input id="userinput" class="nameinput" type="entername"> 
+                    <div class="flex" style="width: 5rem;  border: 7px solid #FF8220;">
+                    <button  class="maxwidth backblack border0" onclick="entername()" style=" color: #01FDFD;" >ENTER</button>
+                </div>
+                </div>
+            </div>
+
+
+
+                    <button id="entergame" class="text-color-effect none border0" style="margin: 3rem;"
                         onmousedown="song.pause(); among.play(); magicstart.play(); ">
                         <h1>
                             ENTER GAME
@@ -98,14 +117,12 @@
 
                 </div>
 
-                <div style="display: flex; position: absolute; 
-            left: 0; margin: 3rem;">
-                    <img style="height: 600px;" src="assets/img/obeseman.png" alt="">
+                <div class="flex absolute" style=" left: 0; margin: 3rem;">
+                    <img style="height: 780px;" src="assets/img/obeseman.png" alt="">
                 </div>
 
-                <div style="display: flex; position: absolute; 
-            right: 0; margin: 3rem;">
-                    <img style="height: 600px;" src="assets/img/obeseman.png" alt="">
+                <div class="flex absolute" style=" right: 0; margin: 3rem;">
+                    <img style="height: 780px;" src="assets/img/obeseman.png" alt="">
                 </div>
 
 
@@ -116,8 +133,7 @@
 
 
 
-        <iframe id="start-text" class="game" src="game2.html" frameborder="0"
-            style="display: none; height: 100vh; width: 100%;"></iframe>
+        <iframe id="start-text" class="game maxwidth none fullscreen" src="game2.html" frameborder="0"></iframe>
 
 
 

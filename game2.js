@@ -1,3 +1,11 @@
+function changetext(text) { 
+const paragraph = document.getElementById("text")
+paragraph.innerText = text;
+}
+
+
+
+
 $(document).ready(function () {
     var target = $("#lore");
     $("#continue").click(function () {
@@ -20,6 +28,8 @@ function house() {
 
     document.getElementById('house').style.display = "flex";
 
+    changetext("This is it. Finally we can face the evil MC.SLIM! He will soon regret stealing my lunch 10 years ago.")
+
 
 
 }
@@ -39,6 +49,9 @@ function nextpage() {
   myobj.remove();
 
   document.getElementById('texttwo').style.display = "flex";
+
+  changetext("Let's enter the evil mansion and kick him in the sack!")
+ 
 
 }
 

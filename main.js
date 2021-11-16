@@ -53,24 +53,35 @@ function myFunction() {
 
 
 
-   function entername() {
-    var person = prompt("Please enter your name", "");
-    if (person != null) {
-      document.getElementById("demo").innerHTML =
-      person + "! Last chance to back out..";
-      
-    }
-    else {
-      alert("Are you stupid? The game hasn't even started yet... try again");
-  }
-  var myobj = document.getElementById("entername");
+function begin() {
+
+  var myobj = document.getElementById("begin");
   myobj.remove();
 
-  document.getElementById('entergame').style.display = "flex";
+  document.getElementById('nameinput').style.display = "flex";
 
 
 
     }
+
+    function entername() {
+      var person = document.getElementById("userinput").value;
+      if (person != null) {
+        document.getElementById("demo").innerHTML =
+        person + "! Last chance to back out..";
+        
+      }
+
+      var myobj = document.getElementById("nameinput");
+      myobj.remove();
+    
+      document.getElementById('entergame').style.display = "flex";
+}
+    
+    
+    
+
+
 
 
     $(document).ready(function() {
@@ -90,7 +101,17 @@ function myFunction() {
     }
 
 
-  
+    var elem = document.getElementById("gamefullscreen");
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    }
+
 
     function stop() {
       song.pause();

@@ -9,7 +9,7 @@
     src: url(/font/PressStart2P.ttf);
 }
 
-.geet {
+.interlude {
     border-right: solid 2px rgba(0, 0, 0, 0.75);
     white-space: nowrap;
     overflow: hidden;
@@ -146,43 +146,52 @@ button:hover {
     }
 }
 
-
-
 .type {
-  font-size: 22px;
-    color:#0000;
-    background:
-      linear-gradient(-90deg,#FF7E00 5px,#0000 0) 10px 0,
-      linear-gradient(#ffffff 0 0) 0 0;
-    background-size:calc(var(--n)*1ch) 200%;
-    -webkit-background-clip:padding-box,text;
-    background-clip:padding-box,text;
-    background-repeat:no-repeat;
-    animation: 
-      b .7s infinite steps(1),   
-      t calc(var(--n)*.09s) steps(var(--n)) forwards;
-  }
-  @keyframes t{
-    from {background-size:0 200%}
-  }
-  @keyframes b{
-    50% {background-position:0 -100%,0 0}
-  }
+    font-size: 22px;
+    color: #0000;
+    background: linear-gradient(-90deg, #FF7E00 5px, #0000 0) 10px 0, linear-gradient(#ffffff 0 0) 0 0;
+    background-size: calc(var(--n)*1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation: b .3s infinite steps(1), t calc(var(--n)*.09s) steps(var(--n)) forwards;
+}
 
+@keyframes t {
+    from {
+        background-size: 0 200%
+    }
+}
 
-
+@keyframes b {
+    50% {
+        background-position: 0 -100%, 0 0
+    }
+}
 
 .arrow {
-    -webkit-animation: action .3s infinite  alternate;
-    animation: action .3s infinite  alternate;
+    -webkit-animation: action .3s infinite alternate;
+    animation: action .3s infinite alternate;
+    height: 8rem;
+    width: 6rem;
+    margin-left: 40rem;
+    margin-bottom: 6rem;
 }
 
 @-webkit-keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
