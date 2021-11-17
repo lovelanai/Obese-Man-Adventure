@@ -1,31 +1,3 @@
-var bleep = new Audio();
-bleep.src = "assets/music/Mario-coin-sound.mp3";
-
-
-var song = new Audio();
-song.src = "/assets/music/Jeremy Blake - Powerup!.mp3";
-
-
-var slurp = new Audio();
-slurp.src = "/assets/music/Mario Warp Pipe Sound Effect.mp3";
-
-var downsound = new Audio();
-downsound.src = "/assets/music/Arcade game over original meme Sound Effect _ Comedy sound _ Funny sound effect _.mp3";
-
-var among = new Audio();
-among.src = "/assets/music/amongus.mp3";
-
-var hit = new Audio();
-hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
-
-var magicstart = new Audio();
-magicstart.src = "/assets/music/Magic Game Start Sound Effect.mp3";
-
-var warp = new Audio();
-warp.src = "/assets/music/Mariowarp.mp3";
-
-
-
 function firstfunction(){
 var myobj = document.getElementById("firstfunction");
 myobj.remove();
@@ -104,8 +76,8 @@ function begin() {
   
     }
 
-    function scenetwo(){
-      document.getElementById('start-text').style.display = "initial";
+    function enterscene1(){
+      document.getElementById('scene1').style.display = "initial";
     }
 
 
@@ -171,15 +143,7 @@ function begin() {
       
       
       }
-      
-      var spooky = new Audio();
-      spooky.src = "/assets/music/Kevin MacLeod - 8bit Dungeon Level.mp3";
-      
-      
-      var hit = new Audio();
-      hit.src = "/assets/music/8 bit impact sound effect (volume up).mp3";
-      
-      
+
       
       function nextpage() {
       
@@ -205,7 +169,7 @@ function begin() {
       
       
       $(document).ready(function() {
-          var target = $("#house");
+          var target = $("#scene1");
           $("#arrow").click(function() {
             removeElement(target);
           });
@@ -219,12 +183,9 @@ function begin() {
           });
         }
       
-      function gotogamethree(){
+      function gotoscene2(){
         document.getElementById('scenetwo').style.display = "flex";
       }
       
-      function stop() {
-        spooky.pause();
-        spooky.currentTime = 0;
-      }
+
       

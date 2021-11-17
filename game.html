@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="mainmenu.css">
+    <link rel="stylesheet" href="scene1.css">
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="reusable.css">
     <link rel="stylesheet" href="game2.css">
@@ -16,33 +19,19 @@
 <body>
 
 
-
     <main id="gamefullscreen">
 
-
+        <!-- STARTLOGO -->
         <div id="startbtn" class="container">
-
-
-
-            <audio id="audio">
-                <source src="assets/music/Mario-coin-sound.mp3" type="audio/mpeg">
-            </audio>
             <button onmousedown="bleep.play()" onclick="myFunction()" class="start-logo">
-                <a class="start-logo, text-color-effect" >START</a></button>
-
-
+                <a class="start-logo, text-color-effect">START</a></button>
             <div>
                 <p class="start-coin">INSERT COIN</p>
             </div>
-
-
-
-
-
-
-
         </div>
+        <!-- STARTLOGO END -->
 
+        <!-- MAIN MENU -->
         <div id="game" style="background-color: rgb(255, 206, 115); " class="container none">
 
             <button class="start-coin" id="musicbtn" onclick="openMusic();openFullscreen()">
@@ -55,8 +44,7 @@
 
                 <div class="absolute flex" style="top: 88px;">
 
-                    <div class="flex justify-center align-center column"
-                        style=" font-size: 20px;  margin-top: 2rem;">
+                    <div class="flex justify-center align-center column" style=" font-size: 20px;  margin-top: 2rem;">
                         <div class="logo">
                             <h2>OBESE-MAN</h2>
                         </div>
@@ -69,14 +57,16 @@
                     </div>
                 </div>
 
-                <div class="flex align-center justify-center column" style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center;">
+                <div class="flex align-center justify-center column"
+                    style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center;">
 
 
 
 
 
-                    <a  onmousedown="slurp.play()">
-                        <button id="begin" onclick="begin()" class="backtrans border0" style="color: #FF8220; margin: 3rem;">
+                    <a onmousedown="slurp.play()">
+                        <button id="begin" onclick="begin()" class="backtrans border0"
+                            style="color: #FF8220; margin: 3rem;">
 
 
 
@@ -91,22 +81,23 @@
 
 
                     <div class="none" id="nameinput">
-                    <div class="absolute" style=" top: 28rem; left: 38rem; color: #FF8220;">
-                        <h1>ENTER YOUR NAME</h1>
-                    </div>
-                <div class="flex">
+                        <div class="absolute" style=" top: 28rem; left: 38rem; color: #FF8220;">
+                            <h1>ENTER YOUR NAME</h1>
+                        </div>
+                        <div class="flex">
 
-                    <input id="userinput" class="nameinput" type="entername"> 
-                    <div class="flex" style="width: 5rem;  border: 7px solid #FF8220;">
-                    <button  class="maxwidth backblack border0" onclick="entername()" onmousedown="warp.play()" style=" color: #01FDFD;" >ENTER</button>
-                </div>
-                </div>
-            </div>
+                            <input id="userinput" class="nameinput" type="entername">
+                            <div class="flex" style="width: 5rem;  border: 7px solid #FF8220;">
+                                <button class="maxwidth backblack border0" onclick="entername()"
+                                    onmousedown="warp.play()" style=" color: #01FDFD;">ENTER</button>
+                            </div>
+                        </div>
+                    </div>
 
 
 
                     <button id="entergame" class="text-color-effect none border0" style="margin: 3rem;"
-                        onmousedown="song.pause(); among.play(); magicstart.play(); " onclick="scenetwo()">
+                        onmousedown="song.pause(); among.play(); magicstart.play(); " onclick="enterscene1()">
                         <h1>
                             ENTER GAME
                         </h1>
@@ -130,121 +121,262 @@
             </div>
 
         </div>
+<!-- MAIN MENU END -->
 
 
 
 
+<!-- GAME STARTS HERE -->
+
+<!-- SCENE 1, OUTSIDE -->
+
+        <div id="scene1" class="none">
 
 
+            <div id="lore" class="flex column justify-center align-center fullscreen backblack">
 
-       
-       
-       <div id="start-text" style="display: none;">
-       
-       
-        <div id="lore" class="flex column justify-center align-center fullscreen backblack">
+                <div class="typewriter flex align-center justify-center maxwidth maxheight column">
 
-            <div class="interlude flex align-center justify-center maxwidth maxheight column">
-    
-    
-                <a class="interlude" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the Evil Mansion,
-                    MEDIEINSTITUTET...</a>
-    
-                <div>
-                    <button id="continue" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="house()">
-                        <p>continue</p>
-                    </button>
-                </div>
-    
-            </div>
-    
-    
-        </div>
-    
-        <div id="house" class="none column fullscreen justify-center align-center backblack">
-    
-    
-    
-            <div class="flex maxheight maxwidth column absolute"
-                style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
-    
-                <div class="relative maxheight maxwidth flex align-end justify-start">
-    
-                    <div id="textone" class="flex align-center"
-                        style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
-                        <div style="margin: 1rem;">
-                            <span id="text" class="type" style="--n:103"></span>
-                        </div>
-                        <button class="absolute z1" onclick="nextpage()" style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
-                    </div>
-    
-    
-                    <div class="none align-center" id="texttwo"
-                        style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
-                        <div style="margin: 1rem;">
-    
-                            <span id="text" class="type" style="--n:103;"></span>
-                        </div>
-    
-                        <button class="absolute z1" onclick="closepage()" style=" margin: 33rem; margin-top: 42rem">GO
-                            -></button>
-                    </div>
-    
-    
-    
-                    <div class="arrow absolute z1 none" id="arrow" onclick="gotogamethree()">
-    
-                        <button class="maxheight maxwidth backtrans border0">
-                            <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+
+                    <a class="typewriter" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the Evil Mansion,
+                        MEDIEINSTITUTET...</a>
+
+                    <div>
+                        <button id="continue" class="start-coin" onmousedown="outside.play(); hit.play()"
+                            onclick="house()">
+                            <p>continue</p>
                         </button>
                     </div>
-    
-    
-    
-                </div>
-    
-            </div>
-    
-    
-    
-    
-            <div id="myNav" class="overlaydemo">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-contentdemo">
-                    <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
-                </div>
-            </div>
-        
 
-            <div style="display: flex; justify-content: flex-end; height: 100%; width: 100%;">
-                <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onclick="openNav()">
-                <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                </div>
+
+
+            </div>
+
+            <div id="house" class="none column fullscreen justify-center align-center backblack">
+
+
+
+                <div class="flex maxheight maxwidth column absolute"
+                    style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
+
+                    <div class="relative maxheight maxwidth flex align-end justify-start">
+
+                        <div id="textone" class="flex align-center textbox">
+                            <div style="margin: 1rem;">
+                                <span id="text" class="type" style="--n:103"></span>
+                            </div>
+                            <button class="absolute z1" onmousedown="clicksound.play()" onclick="nextpage()"
+                                style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+                        </div>
+
+
+                        <div class="none align-center textbox" id="texttwo">
+                            <div style="margin: 1rem;">
+
+                                <span id="text" class="type" style="--n:103;"></span>
+                            </div>
+
+                            <button class="absolute z1" onmousedown="clicksound.play()" onclick="closepage()"
+                                style=" margin: 33rem; margin-top: 42rem">GO
+                                -></button>
+                        </div>
+
+
+
+                        <div class="arrow absolute z1 none" id="arrow"
+                            onmousedown="opendoor.play(); bowser.play(); outside.pause()" onclick="gotoscene2()">
+
+                            <button class="maxheight maxwidth backtrans border0">
+                                <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                            </button>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div id="myNav" class="overlaydemo">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-contentdemo">
+                        <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                    </div>
+                </div>
+
+
+                <div style="display: flex; justify-content: flex-end; height: 100%; width: 100%;">
+                    <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;"
+                        onclick="openNav()">
+                        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+<!-- SCENE 1, OUTSIDE END -->
+   
+<!-- SCENE 2, INSIDE-->
+<div id="scenetwo" class="none">
+<div id="lore2" class="flex column justify-center align-center fullscreen backblack">
+
+    <div class="typewriter flex align-center justify-center maxwidth maxheight column">
+
+
+        <a class="typewriter" style=" margin: 4rem; color: rgb(255, 255, 255);">Inside of the Evil Mansion,
+            MEDIEINSTITUTET...</a>
+
+        <div>
+            <button id="enterhouse" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="enterhouse()">
+                <p>continue</p>
+            </button>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<div id="scene2fullscreen" class="column none fullscreen justify-center align-center backblack">
+
+    <div style="position: absolute; top: 0; z-index: 20;"><button onclick="openFullscreen()">RETURN TO FULLSCREEN</button></div>
+
+
+
+    <div class="flex maxheight maxwidth column absolute"
+        style="background-image: url(/assets/img/medieinstitutet.png); background-size: cover;">
+
+        <div class="relative maxheight maxwidth flex align-end justify-start">
+
+            <div id="s2textone" class="flex align-center textbox">
+                <div style="margin: 1rem;">
+                    <span id="text" class="type" style="--n:103"></span>
+                </div>
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2nextpage()"
+                    style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+            </div>
+
+
+            <div class="none align-center textbox" id="s2texttwo">
+                <div style="margin: 1rem;">
+
+                    <span id="text" class="type" style="--n:103;"></span>
+                </div>
+
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2closepage()" style=" margin: 33rem; margin-top: 42rem">GO
+                    -></button>
+            </div>
+
+
+
+            <div style="margin-left:13rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow1" onclick="gotogamethree()">
+
+                <button class="maxheight maxwidth backtrans border0">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                </button>
+            </div>
+
+
+            <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="absolute z1 none s2arrow2up" id="s2arrow2">
+
+                <button class="maxheight maxwidth backtrans border0" onmousedown="what.play()" onclick="showelevatorpic()">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                </button>
+
+
+
+            </div>
+            
+            <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="none absolute z1 none s2arrow2up" id="noelevator">
+            <button class="maxheight maxwidth backtrans border0" onmousedown="error.play()" onclick="noelevator()">
+                <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+            </button>
+            </div>
+
+
+            <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3" onclick="gotogamethree()">
+
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                </button>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
             </div>
         </div>
     
 
-
-
-    
-    
-
-
+        <div style="display: flex; justify-content: flex-end;">
+            <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onmousedown="inventory.play()" onclick="openNav()">
+            <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+        </div>
     </div>
 
+
+
+
+    <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
+        <img id="changepicture" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
+        <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="/assets/img/fatcry.png" alt="">
+        <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
+
+
+        <div class="relative maxheight maxwidth flex align-end justify-start">
+        <div id="s2picturetext" class="flex absolute textbox">
+        <div style="margin: 1rem;">
+            <span id="text" class="type" style="--n:200"></span>
+        </div>
+
+        <button id="changepicturebtn" class="absolute z1" onmousedown="clicksound.play(); kick.play();" onclick="changepicture()"
+            style=" bottom: 20px; right: 20px">NEXT-></button>
+
+            <button id="changepicture2" class="none absolute z1" onmousedown="clicksound.play()" onclick="changepicture2()"
+            style=" bottom: 20px; right: 20px">CLOSE-></button>
+        </div>
     </div>
+</div>
 
-    <iframe id="scenetwo" class="flex game none fullscreen maxwidth" src="game2.html" frameborder="0"></iframe>
+</div>
+</div>
 
-        </main>
-
-
-
+<!-- SCENE 2, INSIDE END-->
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="main.js"></script>
-        <script src="game2.js"></script>
- 
+
+    </main>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="audio.js"></script>
+    <script src="main.js"></script>
+    <script src="game2.js"></script>
+
 </body>
 
 </html>

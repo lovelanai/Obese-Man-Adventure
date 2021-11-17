@@ -18,11 +18,11 @@
         <div class="interlude flex align-center justify-center maxwidth maxheight column">
 
 
-            <a class="interlude" style=" margin: 4rem; color: rgb(255, 255, 255);">Outside of the Evil Mansion,
+            <a class="interlude" style=" margin: 4rem; color: rgb(255, 255, 255);">Inside of the Evil Mansion,
                 MEDIEINSTITUTET...</a>
 
             <div>
-                <button id="geet" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="geet()">
+                <button id="enterhouse" class="start-coin" onmousedown="spooky.play(); hit.play()" onclick="enterhouse()">
                     <p>continue</p>
                 </button>
             </div>
@@ -44,24 +44,22 @@
 
             <div class="relative maxheight maxwidth flex align-end justify-start">
 
-                <div id="s2textone" class="flex align-center"
-                    style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                <div id="s2textone" class="flex align-center textbox">
                     <div style="margin: 1rem;">
                         <span id="text" class="type" style="--n:103"></span>
                     </div>
-                    <button class="absolute z1" onclick="s2nextpage()"
+                    <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2nextpage()"
                         style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
                 </div>
 
 
-                <div class="none align-center" id="s2texttwo"
-                    style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815);  ">
+                <div class="none align-center textbox" id="s2texttwo">
                     <div style="margin: 1rem;">
 
                         <span id="text" class="type" style="--n:103;"></span>
                     </div>
 
-                    <button class="absolute z1" onclick="s2closepage()" style=" margin: 33rem; margin-top: 42rem">GO
+                    <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2closepage()" style=" margin: 33rem; margin-top: 42rem">GO
                         -></button>
                 </div>
 
@@ -75,17 +73,26 @@
                 </div>
 
 
-                <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="absolute z1 none" id="s2arrow2">
+                <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="absolute z1 none s2arrow2up" id="s2arrow2">
 
-                    <button class="maxheight maxwidth backtrans border0" onclick="showelevatorpic()">
+                    <button class="maxheight maxwidth backtrans border0" onmousedown="what.play()" onclick="showelevatorpic()">
                         <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
                     </button>
+
+
+
+                </div>
+                
+                <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="none absolute z1 none s2arrow2up" id="noelevator">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="error.play()" onclick="noelevator()">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                </button>
                 </div>
 
 
                 <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3" onclick="gotogamethree()">
 
-                    <button class="maxheight maxwidth backtrans border0">
+                    <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()">
                         <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                     </button>
                 </div>
@@ -99,7 +106,7 @@
 
 
             <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
                     <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
                 </div>
@@ -107,7 +114,7 @@
         
 
             <div style="display: flex; justify-content: flex-end;">
-                <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onclick="openNav()">
+                <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onmousedown="inventory.play()" onclick="openNav()">
                 <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
             </div>
         </div>
@@ -117,24 +124,33 @@
 
         <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
             <img id="changepicture" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
+            <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="/assets/img/fatcry.png" alt="">
             <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
 
-            <div id="s2picturetext" class="flex absolute"
-            style=" margin: 4rem ;height: 12rem; width: 40rem; background-color: rgba(0, 0, 0, 0.815); bottom: 0; left: 0;">
+
+            <div class="relative maxheight maxwidth flex align-end justify-start">
+            <div id="s2picturetext" class="flex absolute textbox">
             <div style="margin: 1rem;">
-                <span id="text" class="type" style="--n:103"></span>
+                <span id="text" class="type" style="--n:200"></span>
             </div>
-            <button  class="absolute z1" onclick="changepicture()"
+
+            <button id="changepicturebtn" class="absolute z1" onmousedown="clicksound.play(); kick.play();" onclick="changepicture()"
                 style=" bottom: 20px; right: 20px">NEXT-></button>
+
+                <button id="changepicture2" class="none absolute z1" onmousedown="clicksound.play()" onclick="changepicture2()"
+                style=" bottom: 20px; right: 20px">CLOSE-></button>
+            </div>
         </div>
-
-                    </div>
-
     </div>
 
+</div>
+
+                    
+    
 
 
-    </div>
+
+    
 
 
 
@@ -144,6 +160,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="audio.js"></script>
     <script src="game2.js"></script>
     <script src="main.js"></script>
 </body>
