@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="mainmenu.css">
     <link rel="stylesheet" href="scene1.css">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="scene2.css">
     <link rel="stylesheet" href="reusable.css">
-    <link rel="stylesheet" href="game2.css">
+
 
 
 </head>
@@ -34,7 +34,7 @@
         <!-- MAIN MENU -->
         <div id="game" style="background-color: rgb(255, 206, 115); " class="container none">
 
-            <button class="start-coin" id="musicbtn" onclick="openMusic();openFullscreen()">
+            <button class="start-coin" id="fullscreenbtn" onclick="entermainmenu();openFullscreen()">
                 <a onmousedown="hit.play(); song.play()">SOUND ON + FULLSCREEN</a>
             </button>
 
@@ -262,7 +262,7 @@
 
             <div id="s2textone" class="flex align-center textbox">
                 <div style="margin: 1rem;">
-                    <span id="text" class="type" style="--n:103"></span>
+                    <span id="text2" class="type" style="--n:103"></span>
                 </div>
                 <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2nextpage()"
                     style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
@@ -272,16 +272,25 @@
             <div class="none align-center textbox" id="s2texttwo">
                 <div style="margin: 1rem;">
 
-                    <span id="text" class="type" style="--n:103;"></span>
+                    <span id="text2" class="type" style="--n:103;"></span>
                 </div>
 
                 <button class="absolute z1" onmousedown="clicksound.play()" onclick="s2closepage()" style=" margin: 33rem; margin-top: 42rem">GO
                     -></button>
             </div>
 
+            <div class="none align-center textbox" style="z-index: 3;" id="s2textafterscene3">
+                <div style="margin: 1rem;">
+
+                    <span id="textafterscene3" class="type" style="--n:153;"></span>
+                </div>
+
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="afterscienceclose()" style=" margin: 33rem; margin-top: 42rem">GO
+                    -></button>
+            </div>
 
 
-            <div style="margin-left:13rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow1" onclick="gotogamethree()">
+            <div style="margin-left:13rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow1" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="gotoscene3()">
 
                 <button class="maxheight maxwidth backtrans border0">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
@@ -306,7 +315,7 @@
             </div>
 
 
-            <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3" onclick="gotogamethree()">
+            <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3">
 
                 <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
@@ -347,7 +356,7 @@
         <div class="relative maxheight maxwidth flex align-end justify-start">
         <div id="s2picturetext" class="flex absolute textbox">
         <div style="margin: 1rem;">
-            <span id="text" class="type" style="--n:200"></span>
+            <span id="text2" class="type" style="--n:200"></span>
         </div>
 
         <button id="changepicturebtn" class="absolute z1" onmousedown="clicksound.play(); kick.play();" onclick="changepicture()"
@@ -364,6 +373,83 @@
 
 <!-- SCENE 2, INSIDE END-->
 
+<!-- SCENE 3, SCIENCEROOM-->
+<div id="scenethree" class="none">
+
+
+<div id="scienceroomfullscreen" class="column flex fullscreen justify-center align-center backblack">
+
+    <div style="position: absolute; top: 0; z-index: 20;"><button onclick="openFullscreen()">RETURN TO FULLSCREEN</button></div>
+
+
+
+    <div class="flex maxheight maxwidth column absolute"
+        style="background-image: url(/assets/img/laboratory.png); background-size: cover;">
+
+        <div class="relative maxheight maxwidth flex align-end justify-start">
+
+
+            <div class="flex absolute" style="right: 14rem; bottom: 13rem;">
+                <img style="height: 30rem;" id="bigman" src="assets/img/obeseman.png" alt="bigman">
+                <img class="none" id="sadbigman" style="height: 30rem;" src="assets/img/fatcry.png" alt="sad bigman">
+            </div>
+
+
+            <div id="s3text1" class="flex align-center textbox">
+                <div style="margin: 1rem;">
+                    <span id="text3" class="type" style="--n:103"></span>
+                </div>
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="s3text1()"
+                    style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+            </div>
+
+            <div style="margin-left:6rem; margin-bottom:28rem;" class="s2arrow absolute z1 none" id="s3arrow" onclick="bubblebox()">
+                <button class="maxheight maxwidth backtrans border0">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                </button>
+            </div>
+
+            <div style="margin-left:94rem; margin-bottom:24rem;" class="s2arrow absolute z1 none" id="s3arrow2" onmousedown="labroom.pause(); spooky.play();" onclick="leavescienceroom1()">
+                <button class="maxheight maxwidth backtrans border0">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                </button>
+            </div>
+
+
+
+            <div id="bubblebox"  class="none absolute" style="top:10rem; left:1rem;">    
+                    <img  style="height: 15rem;" src="/assets/img/chatbubble.png" alt="">
+
+                    <div class="flex align-center bubblebox">
+                        <div style="margin: 1rem;">
+                            <span id="text3" class="bubble" style="--n:103;"></span>
+                        </div>
+                        <button class="absolute z1" onmousedown="clicksound.play()" onclick="s3text2()"
+                            style="top:7.5rem; left: 21rem;">CLOSE-></button>
+
+                    </div>
+            </div>
+
+            <div id="s3text2" class="none align-center textbox">
+                <div style="margin: 1rem;">
+                    <span id="text3" class="type" style="--n:103"></span>
+                </div>
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="closes3text2()"
+                    style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+            </div>
+            
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
 
 
     </main>
@@ -375,7 +461,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="audio.js"></script>
     <script src="main.js"></script>
-    <script src="game2.js"></script>
 
 </body>
 
