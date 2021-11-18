@@ -51,3 +51,19 @@ error.src = "/assets/music/error.mp3";
 
 var labroom = new Audio();
 labroom.src = "/assets/music/labroom.mp3";
+
+var scream = new Audio();
+scream.src = "assets/music/angrywoman.mp3";
+
+var mmm = new Audio();
+mmm.src = "assets/music/happywoman.mp3";
+
+var chest = new Audio();
+chest.src = "assets/music/chest.mp3";
+
+var unlock = new Audio();
+unlock.src = "assets/music/unlock.mp3";
+
+
+var squeek = new Audio();
+squeek.src = "assets/music/squeek.mp3";

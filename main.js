@@ -380,12 +380,16 @@ function grabkey(){
   document.getElementById('afterkeytext').style.display = "flex";
   document.getElementById('keybox').style.display = "none";
   document.getElementById('showboxcontent').style.display = "none";
+
+  var myobj = document.getElementById("lockeddoor");
+  myobj.remove();
   changetext3("NICE! I found the key to the kitchen! I will put it in my inventory for now!....")
 
 }
 
 function closekeytext(){
   document.getElementById('leavescienceroom2').style.display = "flex";
+  document.getElementById('unlockeddoorarrow').style.display = "flex";
   var myobj = document.getElementById("afterkeytext");
   myobj.remove();
 
@@ -394,6 +398,8 @@ function closekeytext(){
 function leavescienceroom2(){
   document.getElementById('scenetwo').style.display = "flex";
   document.getElementById('scenethree').style.display = "none";
+ 
+
   var myobj = document.getElementById("leavescienceroom2");
   myobj.remove();
 }
@@ -409,9 +415,10 @@ function changetextlockeddoor(text) {
 
 function lockeddoor(){
   document.getElementById('lockeddoorcontainer').style.display = "flex";
-  changetextlockeddoor("FUCK! The door is closed... Must find something to open it with!...")
   var myobj = document.getElementById("s2arrow3");
   myobj.remove();
+  changetextlockeddoor("FUCK! The door is closed... Must find something to open it with!...")
+
 }
 
 function lockeddoorclose(){
@@ -423,4 +430,10 @@ function lockeddoorclose(){
 function lockeddoortry(){
   document.getElementById('lockeddoorcontainer').style.display = "flex";
   changetextlockeddoor("Stupid ass.. I thought i was clear. GET SOMETHING TO OPEN THE DOOR!...")
+}
+
+function unlockeddoor(){
+  document.getElementById('lockeddoorcontainer').style.display = "flex";
+  document.getElementById('unlocked').style.display = "initial";
+  changetextlockeddoor("GOOD JOB!!! Let's go inside!...")
 }

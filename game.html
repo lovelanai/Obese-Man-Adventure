@@ -325,13 +325,19 @@
 
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="s2arrow3">
-                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="lockeddoor()">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); error.play();" onclick="lockeddoor()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="closeddoorarrow">
-                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="lockeddoortry()">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); scream.play();" onclick="lockeddoortry()">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                </button>
+            </div>
+
+            <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="unlockeddoorarrow">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); unlock.play(); squeek.play()" onclick="unlockeddoor()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
@@ -365,6 +371,7 @@
 
     <div id="lockeddoorcontainer" class="none fullscreen absolute maxwidth justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
         <img id="lockeddoor" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/lockeddoor.png" alt="">
+        <img id="unlocked" style=" display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/opendoor.png" alt="">
     
         <div class="relative maxheight maxwidth flex align-end justify-start">
         <div class="flex align-center textbox">
@@ -384,7 +391,7 @@
         <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
         <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="/assets/img/fatcry.png" alt="">
         <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
-        <img id="lockeddoor" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/lockeddoor.png" alt="">
+
 
 
         <div class="relative maxheight maxwidth flex align-end justify-start">
@@ -467,7 +474,7 @@
                     style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
             </div>
 
-            <div style="left: 10rem; top: 29rem;" class="s2arrow absolute z1 none" id="s3arrow" onclick="bubblebox()">
+            <div style="left: 10rem; top: 29rem;" class="s2arrow absolute z1 none" id="s3arrow" onmousedown="scream.play()" onclick="bubblebox()">
                 <button class="maxheight maxwidth backtrans border0">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
                 </button>
@@ -488,7 +495,7 @@
                         <div style="margin: 1rem;">
                             <span id="text3" class="bubble" style="--n:103;"></span>
                         </div>
-                        <button class="absolute z1" onmousedown="clicksound.play()" onclick="s3text2()"
+                        <button class="absolute z1" onmousedown="clicksound.play(); what.play();" onclick="s3text2()"
                             style="top:7.5rem; left: 21rem;">CLOSE-></button>
 
                     </div>
@@ -508,7 +515,7 @@
             <!-- 2ND TIME ENTER SCIENCEROOM -->
 
             <div id="keybox" class="keybox none">
-                <button class="backtrans border0" onclick="openbox()">
+                <button class="backtrans border0" onmousedown="chest.play()" onclick="openbox()">
                     <img class="maxwidth maxheight" src="/assets/img/box.png" alt="">
                 </button>
             </div>
@@ -517,7 +524,7 @@
 
             <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
                 <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/insidebox.jpeg" alt="">
-                <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onclick="grabkey()">
+                <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onmouseover="bleep.play" onclick="grabkey()">
                 <img id="key" style="height: 15rem; width: 10rem; position: absolute;" src="/assets/img/key.png" alt="">
             </button>
         </div>
@@ -536,7 +543,7 @@
 
     <div style="bottom: 28rem; right: 5rem;" class="s2arrow absolute z1 none" id="leavescienceroom2">
 
-        <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="leavescienceroom2()">
+        <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); labroom.pause(); spooky.play();" onclick="leavescienceroom2()">
             <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
         </button>
     </div>
