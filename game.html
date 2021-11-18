@@ -337,7 +337,7 @@
             </div>
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="unlockeddoorarrow">
-                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); unlock.play(); squeek.play()" onclick="unlockeddoor()">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); unlock.play(); squeek.play();" onclick="unlockeddoor()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
@@ -359,6 +359,10 @@
                 <div id="gotkey" class="inventorybag none">
                     <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
                 </div>
+
+                <div id="gotkorg" class="inventorybag none">
+                    <img class="maxheight maxwidth" src="assets/img/korg.png" alt="">
+                </div>
             </div>
         </div>
     
@@ -378,8 +382,10 @@
         <div style="margin: 1rem;">
             <span id="textlockeddoor" class="type" style="--n:103"></span>
         </div>
-        <button class="absolute z1" onmousedown="clicksound.play()" onclick="lockeddoorclose()"
-            style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+        <button id="lockeddoorbtn" class="absolute z1" onmousedown="clicksound.play(); spooky.pause()" onclick="lockeddoorclose()"
+            style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+            <button id="unlockeddoorbtn" class=" none absolute z1" onmousedown="clicksound.play(); spooky.pause()" onclick="enterkitchen()"
+            style=" margin: 33rem; margin-top: 42rem">ENTER-></button>
     </div>
     </div>
     
@@ -411,6 +417,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 
@@ -435,7 +453,7 @@
                 <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav2()">&times;</a>
                 <div class="overlay-content">
                     <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
-                    <div id="gotkey2" class="inventorybag none">
+                   <div id="gotkey2" class="inventorybag">
                         <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
                     </div>
                 </div>
@@ -521,7 +539,6 @@
             </div>
 
 
-
             <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
                 <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/insidebox.jpeg" alt="">
                 <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onmouseover="bleep.play" onclick="grabkey()">
@@ -547,6 +564,8 @@
             <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
         </button>
     </div>
+
+
     
 
 
@@ -564,8 +583,150 @@
 </div>
 </div>
 </div>
+<!-- SCENE 3, SCIENCEROOM END-->
+
+<div id="scenefour" class="none">
 
 
+    <div id="kitchenfullscreen" class="column flex fullscreen justify-center align-center backblack">
+
+        <div style="position: absolute; top: 0; z-index: 20;"><button onclick="openFullscreen()">RETURN TO
+                FULLSCREEN</button></div>
+
+
+
+        <div class="flex maxheight maxwidth column absolute"
+            style="background-image: url(/assets/img/kitchen.png); background-size: cover; background-repeat: no-repeat;">
+
+            <div class="relative maxheight maxwidth flex align-end justify-start">
+
+                <div id="myNav3" class="overlay" style="z-index: 10;">
+                    <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()"
+                        onclick="closeNav3()">&times;</a>
+                    <div class="overlay-content">
+                        <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+
+                        <div id="gotkorg2" class="inventorybag none">
+                            <img class="maxheight maxwidth" src="assets/img/korg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <span
+                        style="cursor: pointer; height: 10rem; width: 4rem; position: absolute; top: 27rem; right: 0;"
+                        onmousedown="inventory.play()" onclick="openNav3()">
+                        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                </div>
+            </div>
+
+            <div class="relative maxheight maxwidth flex align-end justify-start">
+
+                <div id="4text1" class="flex absolute justify-center textbox">
+                    <div style="margin: 1rem;">
+                        <span id="text4" class="type" style="--n:200"></span>
+                    </div>
+
+
+
+                    <button id="4btn1" class="none absolute z1" onmousedown="clicksound.play(); kick.play();"
+                        onclick="next41()" style=" bottom: 20px; right: 20px">NEXT-></button>
+
+                    <button id="4btn2" class="none absolute z1" onmousedown="clicksound.play()"
+                        onclick="next42()" style=" bottom: 20px; right: 20px">CLOSE-></button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="fridge" class="fridge none">
+            <button class="backtrans border0" onmousedown="chest.play()" onclick="openfridge()">
+                <img class="maxwidth maxheight" src="/assets/img/fridge.png" alt="">
+            </button>
+        </div>
+
+
+
+
+
+        <div class="flex absolute" style="left: 45rem; bottom: 6rem;">
+            <img style="height: 40rem;" id="bigman" src="assets/img/obeseman.png" alt="bigman">
+            <img class="none" id="sadbigman" style="height: 30rem;" src="assets/img/fatcry.png"
+                alt="sad bigman">
+        </div>
+
+
+
+
+
+
+
+
+        <div id="openfridge" class="fullscreen absolute maxwidth none justify-center align-center"
+            style="background-image: url(/assets/img/kitchenbackground.png); background-size: cover; z-index: 2;">
+            <img id="infridge" style="display: flex; height: 54rem; width: 69rem; position: absolute;"
+                src="/assets/img/openfridge.png" alt="">
+            <img id="korg" style="display: none; height: 20rem; width: 40rem; " src="/assets/img/korg.png"
+                alt="">
+
+            <div id="bubblebox2" class="flex absolute" style="top:6rem; left:40rem;">
+                <img style="height: 15rem;" src="/assets/img/chatbubble.png" alt="">
+
+                <div id="bubblebox2" class="flex align-center bubblebox">
+                    <div style="margin: 1rem;">
+                        <span id="text4" class="bubble" style="--n:103;"></span>
+                    </div>
+                    <button id="fridgebtn1" class="absolute z1" onmousedown="clicksound.play(); what.play();"
+                        onclick="bubble42()" style="top:7.5rem; left: 21rem;">NEXT-></button>
+
+                    <button id="fridgebtn2" class="none absolute z1"
+                        onmousedown="clicksound.play(); what.play();" onclick="bubble43()"
+                        style="top:7.5rem; left: 21rem;">CLOSE-></button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="4text2box" class="none relative maxheight maxwidth flex align-end justify-start"
+            style="z-index: 3;">
+
+            <div id="4text2" class="flex absolute justify-center textbox">
+                <div style="margin: 1rem;">
+                    <span id="text4" class="type" style="--n:200"></span>
+                </div>
+
+                <button id="4btn3" class="absolute z1" onmousedown="clicksound.play(); kick.play();"
+                    onclick="closekorg()" style=" bottom: 20px; right: 20px">NEXT-></button>
+
+            </div>
+
+        </div>
+
+        <div style="left: 6rem; top: 31rem;" class="s2arrow absolute z1 none" id="leavekitchen"
+            onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="leavekitchen()">
+
+            <button class="maxheight maxwidth backtrans border0">
+                <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+            </button>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+<!-- SCENE 5 IFRAME -->
+
+<iframe id="scenefive" class="none fullscreen maxwidth game" src="scene5.html" frameborder="0"></iframe>
 
     </main>
 

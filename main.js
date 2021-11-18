@@ -343,7 +343,7 @@ function changetextafterscene3(text) {
 function afterscienceclose(){
   var myobj = document.getElementById("s2textafterscene3");
   myobj.remove();
-  document.getElementById('scienceroom2').style.display = "flex";
+ 
   document.getElementById('sadbigman').style.display = "none";
   document.getElementById('bigman').style.display = "flex";
   document.getElementById('s2arrow3').style.display = "flex";
@@ -361,6 +361,9 @@ function scienceroom2(){
   document.getElementById('scenethree').style.display = "flex";
   document.getElementById('scienceroom2textbox').style.display = "flex";
   document.getElementById('keybox').style.display = "flex";
+
+  var myobj = document.getElementById("scienceroom2");
+  myobj.remove();
   changetextscienceroom2("What? That box were not there before!?? Let's check it out!...")
 }
 
@@ -377,6 +380,7 @@ function openbox(){
 function grabkey(){
   document.getElementById('gotkey').style.display = "initial";
   document.getElementById('gotkey2').style.display = "initial";
+  
   document.getElementById('afterkeytext').style.display = "flex";
   document.getElementById('keybox').style.display = "none";
   document.getElementById('showboxcontent').style.display = "none";
@@ -393,20 +397,21 @@ function closekeytext(){
   var myobj = document.getElementById("afterkeytext");
   myobj.remove();
 
+
 }
 
 function leavescienceroom2(){
   document.getElementById('scenetwo').style.display = "flex";
   document.getElementById('scenethree').style.display = "none";
- 
-
-  var myobj = document.getElementById("leavescienceroom2");
+   var myobj = document.getElementById("leavescienceroom");
   myobj.remove();
+
+
 }
 
 
 
-// KITCHENROOM
+// KITCHENROOM ENTER
 
 function changetextlockeddoor(text) {
   const paragraph = document.getElementById("textlockeddoor")
@@ -415,13 +420,15 @@ function changetextlockeddoor(text) {
 
 function lockeddoor(){
   document.getElementById('lockeddoorcontainer').style.display = "flex";
+  document.getElementById('scienceroom2').style.display = "flex";
   var myobj = document.getElementById("s2arrow3");
   myobj.remove();
-  changetextlockeddoor("FUCK! The door is closed... Must find something to open it with!...")
+  changetextlockeddoor("FUCK! The door is locked... Must find something to open it with!...")
 
 }
 
 function lockeddoorclose(){
+  
   document.getElementById('lockeddoorcontainer').style.display = "none";
   document.getElementById('closeddoorarrow').style.display = "flex";
 
@@ -435,5 +442,172 @@ function lockeddoortry(){
 function unlockeddoor(){
   document.getElementById('lockeddoorcontainer').style.display = "flex";
   document.getElementById('unlocked').style.display = "initial";
+  document.getElementById('unlockeddoorbtn').style.display = "initial";
+  var myobj = document.getElementById("lockeddoorbtn");
+  myobj.remove();
   changetextlockeddoor("GOOD JOB!!! Let's go inside!...")
 }
+
+// KITCHEN
+
+function changetext4(text) {
+  const paragraph = document.getElementById("text4")
+  paragraph.innerText = text;
+}
+
+
+function openNav3() {
+  document.getElementById("myNav3").style.width = "17rem";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}
+
+function enterkitchen(){
+  document.getElementById('scenefour').style.display = "flex";
+  document.getElementById('scenetwo').style.display = "none";
+document.getElementById('4btn1').style.display = "flex";
+var myobj = document.getElementById("lockeddoorcontainer");
+myobj.remove();
+
+
+changetext4("How am I supposed to find shit in here? This place is even more boring than the science-whatever?...")
+
+}
+
+function next41(){
+  document.getElementById('4btn2').style.display = "flex";
+  var myobj = document.getElementById("4btn1");
+  myobj.remove();
+
+  changetext4("Well... I might aswell take a look around!...")
+}
+
+function next42(){
+
+  document.getElementById('fridge').style.display = "flex";
+  var myobj = document.getElementById("4text1");
+  myobj.remove();
+}
+
+function openfridge(){
+  document.getElementById('openfridge').style.display = "flex";
+  changetext4("YO YO! YOU FOUND ME! I'M FREDRIK!")
+}
+
+function bubble42(){
+  var myobj = document.getElementById("fridgebtn1");
+  myobj.remove();
+
+  document.getElementById('fridgebtn2').style.display = "flex";
+  changetext4("HERE MAN! TAKE THIS AND GIVE IT TO THE SCIENCEGUY!")
+}
+
+function bubble43(){
+  document.getElementById('4text2').style.display = "flex";
+  document.getElementById('4text2box').style.display = "flex";
+  document.getElementById('korg').style.display = "flex";
+  var myobj = document.getElementById("infridge");
+  myobj.remove();
+  var myobj = document.getElementById("bubblebox2");
+  myobj.remove();
+
+
+  
+  changetext4("HOLY SHIT! WE GOT THE MICRO-KORG!!! LET'S BRING IT TO THE MYSTERIOUS MAN!")
+}
+
+function closekorg(){
+  document.getElementById('gotkorg').style.display = "initial";
+  document.getElementById('gotkorg2').style.display = "initial";
+
+
+  document.getElementById('leavekitchen').style.display = "flex";
+
+  var myobj = document.getElementById("4text2");
+  myobj.remove();
+
+  var myobj = document.getElementById("4text2box");
+  myobj.remove();
+
+  var myobj = document.getElementById("openfridge");
+  myobj.remove();
+
+}
+
+function leavekitchen(){
+    document.getElementById('scenefour').style.display = "none";
+    document.getElementById('scenefive').style.display = "flex";
+
+
+    var myobj = document.getElementById("gotkey");
+    myobj.remove();
+  
+    var myobj = document.getElementById("gotkey2");
+    myobj.remove();
+
+
+
+}
+
+function changetext5(text) {
+  const paragraph = document.getElementById("text5")
+  paragraph.innerText = text;
+}
+
+function meetjanne(){
+  document.getElementById('jannecontainer').style.display = "flex";
+  document.getElementById('janne').style.display = "flex";
+  document.getElementById('bubblebox3').style.display = "flex";
+
+  var myobj = document.getElementById("arrowmeetjanne");
+  myobj.remove();
+
+  changetext5("I THOUGHT I TOLD YOU TO STAY OUT OF MY LAB FAT MAN!!!...")
+
+}
+
+function janneinfo(){
+  changetext5("MY NAME IS JANNE CHEMISTRY!!... WHAT DO YOU WANT DUMBASS????!!")
+  document.getElementById('jannetext1').style.display = "flex";
+  
+  var myobj = document.getElementById("janneinfo");
+  myobj.remove();
+
+}
+
+function jannetext1(){
+  changetext5("WHAAAAT? GIVE ME THAT!! I WILL GIVE YOU SOMETHING IN RETURN TO HELP YOU BEAT MC.DAVID!!..")
+  document.getElementById('jannetext2').style.display = "flex";
+  document.getElementById('itemofvalue').style.display = "flex";
+  var myobj = document.getElementById("jannetext1");
+  myobj.remove();
+}
+
+
+
+function jannetext2(){
+  changetext5("THANKYOU THANKYOU!!!.. HERE YOU GO! AS PROMISED, FATMAN!!.. ")
+  document.getElementById('jannetext3').style.display = "flex";
+
+
+
+  var myobj = document.getElementById("itemofvalue");
+  myobj.remove();
+  var myobj = document.getElementById("jannetext2");
+  myobj.remove();
+}
+
+function jannetext3(){
+  document.getElementById('slimpotion').style.display = "flex";
+  var myobj = document.getElementById("jannecontainer");
+  myobj.remove();
+  var myobj = document.getElementById("jannetext1");
+  myobj.remove();
+
+
+  
+}
+
+

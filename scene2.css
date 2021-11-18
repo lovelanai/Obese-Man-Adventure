@@ -98,3 +98,11 @@
     top: 11rem;
     left: 2.3rem;
 }
+
+.fridge{
+    position: absolute;
+    height: 41rem;
+    right: 9rem;
+    bottom: 9rem;
+}
+
