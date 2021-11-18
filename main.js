@@ -145,7 +145,6 @@ function closepage() {
 
 }
 
-
 $(document).ready(function () {
   var target = $("#scene1");
   $("#arrow").click(function () {
@@ -159,6 +158,7 @@ function removeElement(target) {
   }, 1000, function () {
     target.remove();
   });
+
 }
 
 function gotoscene2() {
@@ -173,26 +173,11 @@ function changetext2(text) {
   paragraph.innerText = text;
 }
 
-$(document).ready(function () {
-  var target = $("#lore2");
-  $("#enterhouse").click(function () {
-    removeElement(target);
-  });
-});
-
-function removeElement(target) {
-  target.animate({
-    opacity: "-=1"
-  }, 1000, function () {
-    target.remove();
-  });
-
-}
-
 
 function enterhouse() {
 
-
+  var myobj = document.getElementById("lore2");
+  myobj.remove();
   document.getElementById('scene2fullscreen').style.display = "flex";
 
   changetext2("The evil MC.DAVID is upstairs... He probably still have some of my baloney sandwitch between his teeth..")
@@ -218,9 +203,9 @@ function s2closepage() {
 
   document.getElementById('s2arrow1').style.display = "flex";
   document.getElementById('s2arrow2').style.display = "flex";
-  document.getElementById('s2arrow3').style.display = "flex";
-
 }
+
+
 
 function openNav() {
   document.getElementById("myNav").style.width = "17rem";
@@ -234,7 +219,7 @@ function closeNav() {
 function showelevatorpic() {
 
   document.getElementById('elevatorpic').style.display = "flex";
-
+  document.getElementById('changepicture').style.display = "initial";
 
   changetext2("Wha..??? WHAT IS THIS????!! ")
 
@@ -282,11 +267,20 @@ function gotoscene3(){
 
 // SCENE 3, SCIENCEROOM FIRST VISIT
 
+
+
 function changetext3(text) {
   const paragraph = document.getElementById("text3")
   paragraph.innerText = text;
 }
 
+function openNav2() {
+  document.getElementById("myNav2").style.width = "17rem";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
 
 
 
@@ -333,6 +327,11 @@ function leavescienceroom1(){
   document.getElementById('s2textafterscene3').style.display = "flex";
   document.getElementById('scenethree').style.display = "none";
   changetextafterscene3("Hmmmm... Valuable items for that guy...? Maybe he's a big fat man like me??? Where can I find items for a Fat dude?")
+  var myobj = document.getElementById("s2arrow1");
+  myobj.remove();
+
+  var myobj = document.getElementById("s3arrow2");
+  myobj.remove();
 
 }
 
@@ -344,4 +343,84 @@ function changetextafterscene3(text) {
 function afterscienceclose(){
   var myobj = document.getElementById("s2textafterscene3");
   myobj.remove();
+  document.getElementById('scienceroom2').style.display = "flex";
+  document.getElementById('sadbigman').style.display = "none";
+  document.getElementById('bigman').style.display = "flex";
+  document.getElementById('s2arrow3').style.display = "flex";
+}
+
+// SCIENCE ROOM 2ND VISIT
+
+function changetextscienceroom2(text) {
+  const paragraph = document.getElementById("changetextscienceroom2")
+  paragraph.innerText = text;
+}
+
+function scienceroom2(){
+  document.getElementById('scenetwo').style.display = "none";
+  document.getElementById('scenethree').style.display = "flex";
+  document.getElementById('scienceroom2textbox').style.display = "flex";
+  document.getElementById('keybox').style.display = "flex";
+  changetextscienceroom2("What? That box were not there before!?? Let's check it out!...")
+}
+
+function s32text1(){
+  document.getElementById('scienceroom2textbox').style.display = "none";
+  
+}
+
+function openbox(){
+  document.getElementById('keybox').style.display = "none";
+  document.getElementById('showboxcontent').style.display = "flex";
+}
+
+function grabkey(){
+  document.getElementById('gotkey').style.display = "initial";
+  document.getElementById('gotkey2').style.display = "initial";
+  document.getElementById('afterkeytext').style.display = "flex";
+  document.getElementById('keybox').style.display = "none";
+  document.getElementById('showboxcontent').style.display = "none";
+  changetext3("NICE! I found the key to the kitchen! I will put it in my inventory for now!....")
+
+}
+
+function closekeytext(){
+  document.getElementById('leavescienceroom2').style.display = "flex";
+  var myobj = document.getElementById("afterkeytext");
+  myobj.remove();
+
+}
+
+function leavescienceroom2(){
+  document.getElementById('scenetwo').style.display = "flex";
+  document.getElementById('scenethree').style.display = "none";
+  var myobj = document.getElementById("leavescienceroom2");
+  myobj.remove();
+}
+
+
+
+// KITCHENROOM
+
+function changetextlockeddoor(text) {
+  const paragraph = document.getElementById("textlockeddoor")
+  paragraph.innerText = text;
+}
+
+function lockeddoor(){
+  document.getElementById('lockeddoorcontainer').style.display = "flex";
+  changetextlockeddoor("FUCK! The door is closed... Must find something to open it with!...")
+  var myobj = document.getElementById("s2arrow3");
+  myobj.remove();
+}
+
+function lockeddoorclose(){
+  document.getElementById('lockeddoorcontainer').style.display = "none";
+  document.getElementById('closeddoorarrow').style.display = "flex";
+
+}
+
+function lockeddoortry(){
+  document.getElementById('lockeddoorcontainer').style.display = "flex";
+  changetextlockeddoor("Stupid ass.. I thought i was clear. GET SOMETHING TO OPEN THE DOOR!...")
 }

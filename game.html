@@ -290,7 +290,14 @@
             </div>
 
 
-            <div style="margin-left:13rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow1" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="gotoscene3()">
+            <div style="left: 13rem; top: 48rem;" class="s2arrow absolute z1 none" id="s2arrow1" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="gotoscene3()">
+
+                <button class="maxheight maxwidth backtrans border0">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                </button>
+            </div>
+
+            <div style="left: 13rem; bottom: 11rem;" class="s2arrow absolute z1 none" id="scienceroom2" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="scienceroom2()">
 
                 <button class="maxheight maxwidth backtrans border0">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
@@ -298,7 +305,7 @@
             </div>
 
 
-            <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="absolute z1 none s2arrow2up" id="s2arrow2">
+            <div style="left: 49.5rem; bottom: 9rem;" class="absolute z1 none s2arrow2up" id="s2arrow2">
 
                 <button class="maxheight maxwidth backtrans border0" onmousedown="what.play()" onclick="showelevatorpic()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
@@ -308,19 +315,28 @@
 
             </div>
             
-            <div style="margin-left: 49.5rem;margin-bottom: 9rem;" class="none absolute z1 none s2arrow2up" id="noelevator">
+            <div style="left: 49.5rem; bottom: 9rem;" class="none absolute z1 none s2arrow2up" id="noelevator">
             <button class="maxheight maxwidth backtrans border0" onmousedown="error.play()" onclick="noelevator()">
                 <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
             </button>
             </div>
 
+            
 
-            <div style="margin-left:84rem; margin-bottom:11rem;" class="s2arrow absolute z1 none" id="s2arrow3">
 
-                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()">
+            <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="s2arrow3">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="lockeddoor()">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
+
+            <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="closeddoorarrow">
+                <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="lockeddoortry()">
+                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                </button>
+            </div>
+
+
 
 
 
@@ -334,6 +350,9 @@
             <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
                 <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                <div id="gotkey" class="inventorybag none">
+                    <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
+                </div>
             </div>
         </div>
     
@@ -344,13 +363,28 @@
         </div>
     </div>
 
+    <div id="lockeddoorcontainer" class="none fullscreen absolute maxwidth justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
+        <img id="lockeddoor" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/lockeddoor.png" alt="">
+    
+        <div class="relative maxheight maxwidth flex align-end justify-start">
+        <div class="flex align-center textbox">
+        <div style="margin: 1rem;">
+            <span id="textlockeddoor" class="type" style="--n:103"></span>
+        </div>
+        <button class="absolute z1" onmousedown="clicksound.play()" onclick="lockeddoorclose()"
+            style=" margin: 33rem; margin-top: 42rem">NEXT-></button>
+    </div>
+    </div>
+    
+    </div>
 
 
 
     <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
-        <img id="changepicture" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
+        <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
         <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="/assets/img/fatcry.png" alt="">
         <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
+        <img id="lockeddoor" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/lockeddoor.png" alt="">
 
 
         <div class="relative maxheight maxwidth flex align-end justify-start">
@@ -367,6 +401,8 @@
         </div>
     </div>
 </div>
+
+
 
 </div>
 </div>
@@ -388,6 +424,26 @@
 
         <div class="relative maxheight maxwidth flex align-end justify-start">
 
+             <div id="myNav2" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav2()">&times;</a>
+                <div class="overlay-content">
+                    <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                    <div id="gotkey2" class="inventorybag none">
+                        <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
+                    </div>
+                </div>
+            </div>
+        
+    
+            <div>
+                <span style="cursor: pointer; height: 10rem; width: 4rem; position: absolute; top: 27rem; right: 0;" onmousedown="inventory.play()" onclick="openNav2()">
+                <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+            </div>
+        </div>
+
+
+
+
 
             <div class="flex absolute" style="right: 14rem; bottom: 13rem;">
                 <img style="height: 30rem;" id="bigman" src="assets/img/obeseman.png" alt="bigman">
@@ -395,7 +451,7 @@
             </div>
 
 
-            <div id="s3text1" class="flex align-center textbox">
+            <div id="s3text1" class="absolute bot0 flex align-center textbox">
                 <div style="margin: 1rem;">
                     <span id="text3" class="type" style="--n:103"></span>
                 </div>
@@ -403,18 +459,26 @@
                     style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
             </div>
 
-            <div style="margin-left:6rem; margin-bottom:28rem;" class="s2arrow absolute z1 none" id="s3arrow" onclick="bubblebox()">
+            <div id="scienceroom2textbox" class="none absolute bot0 align-center textbox">
+                <div style="margin: 1rem;">
+                    <span id="changetextscienceroom2" class="type" style="--n:103"></span>
+                </div>
+                <button class="absolute z1" onmousedown="clicksound.play()" onclick="s32text1()"
+                    style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+            </div>
+
+            <div style="left: 10rem; top: 29rem;" class="s2arrow absolute z1 none" id="s3arrow" onclick="bubblebox()">
                 <button class="maxheight maxwidth backtrans border0">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
                 </button>
             </div>
 
-            <div style="margin-left:94rem; margin-bottom:24rem;" class="s2arrow absolute z1 none" id="s3arrow2" onmousedown="labroom.pause(); spooky.play();" onclick="leavescienceroom1()">
+            <div style="right: 6rem; top: 35rem;" class="s2arrow absolute z1 none" id="s3arrow2" onmousedown="labroom.pause(); spooky.play();" onclick="leavescienceroom1()">
                 <button class="maxheight maxwidth backtrans border0">
                     <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
-
+   
 
 
             <div id="bubblebox"  class="none absolute" style="top:10rem; left:1rem;">    
@@ -430,13 +494,57 @@
                     </div>
             </div>
 
-            <div id="s3text2" class="none align-center textbox">
+            <div id="s3text2" class="none absolute bot0 align-center textbox">
                 <div style="margin: 1rem;">
                     <span id="text3" class="type" style="--n:103"></span>
                 </div>
                 <button class="absolute z1" onmousedown="clicksound.play()" onclick="closes3text2()"
                     style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
             </div>
+
+            
+
+
+            <!-- 2ND TIME ENTER SCIENCEROOM -->
+
+            <div id="keybox" class="keybox none">
+                <button class="backtrans border0" onclick="openbox()">
+                    <img class="maxwidth maxheight" src="/assets/img/box.png" alt="">
+                </button>
+            </div>
+
+
+
+            <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
+                <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/insidebox.jpeg" alt="">
+                <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onclick="grabkey()">
+                <img id="key" style="height: 15rem; width: 10rem; position: absolute;" src="/assets/img/key.png" alt="">
+            </button>
+        </div>
+
+
+
+    <div id="afterkeytext" class="none absolute bot0 align-center textbox">
+        <div style="margin: 1rem;">
+            <span id="text3" class="type" style="--n:103"></span>
+        </div>
+        <button class="absolute z1" onmousedown="clicksound.play()" onclick="closekeytext()"
+        style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+    </div>
+
+
+
+    <div style="bottom: 28rem; right: 5rem;" class="s2arrow absolute z1 none" id="leavescienceroom2">
+
+        <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play()" onclick="leavescienceroom2()">
+            <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+        </button>
+    </div>
+    
+
+
+
+<!-- 2ND TIME ENTER SCIENCEROOM END -->
             
 
 

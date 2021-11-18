@@ -80,3 +80,21 @@
     animation: shake 0.2s;
     animation-iteration-count: 10s;
   }
+
+
+  .keybox{
+
+    position: absolute;
+    height: 10rem;
+    left: 48rem;
+    bottom: 35rem;
+}
+
+
+.inventorybag{
+    position: absolute;
+    height: 5rem;
+    width: 4.6rem;
+    top: 11rem;
+    left: 2.3rem;
+}
