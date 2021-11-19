@@ -450,6 +450,8 @@ function unlockeddoor(){
 
 // KITCHEN
 
+
+
 function changetext4(text) {
   const paragraph = document.getElementById("text4")
   paragraph.innerText = text;

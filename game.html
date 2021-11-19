@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="mainmenu.css">
-    <link rel="stylesheet" href="scene1.css">
-    <link rel="stylesheet" href="scene2.css">
-    <link rel="stylesheet" href="reusable.css">
+    <link rel="stylesheet" href="./animations.css">
+    <link rel="stylesheet" href="./mainmenu.css">
+    <link rel="stylesheet" href="./scene1.css">
+    <link rel="stylesheet" href="./scene2.css">
+    <link rel="stylesheet" href="./reusable.css">
 
 
 
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="flex align-center justify-center column"
-                    style=" width: 36rem; height: 17rem; background-image: url(/assets/img/backplate.png); background-position: center;">
+                    style=" width: 36rem; height: 17rem; background-image: url(./assets/img/backplate.png); background-position: center;">
 
 
 
@@ -110,11 +110,11 @@
                 </div>
 
                 <div class="flex absolute" style=" left: 0; margin: 3rem;">
-                    <img style="height: 780px;" src="assets/img/obeseman.png" alt="">
+                    <img style="height: 780px;" src="./assets/img/obeseman.png" alt="">
                 </div>
 
                 <div class="flex absolute" style=" right: 0; margin: 3rem;">
-                    <img style="height: 780px;" src="assets/img/obeseman.png" alt="">
+                    <img style="height: 780px;" src="./assets/img/obeseman.png" alt="">
                 </div>
 
 
@@ -158,7 +158,7 @@
 
 
                 <div class="flex maxheight maxwidth column absolute"
-                    style="background-image: url(/assets/img/house.jpeg); background-size: cover;">
+                    style="background-image: url(./assets/img/house.jpeg); background-size: cover;">
 
                     <div class="relative maxheight maxwidth flex align-end justify-start">
 
@@ -188,7 +188,7 @@
                             onmousedown="opendoor.play(); bowser.play(); outside.pause()" onclick="gotoscene2()">
 
                             <button class="maxheight maxwidth backtrans border0">
-                                <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                                <img class="maxheight maxwidth" src="./assets/img/PinClipart.png" alt="">
                             </button>
                         </div>
 
@@ -204,7 +204,7 @@
                 <div id="myNav" class="overlaydemo">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="overlay-contentdemo">
-                        <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                        <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
                     </div>
                 </div>
 
@@ -212,7 +212,7 @@
                 <div style="display: flex; justify-content: flex-end; height: 100%; width: 100%;">
                     <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;"
                         onclick="openNav()">
-                        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                        <img style="height: 100%; width: 100%;" src="./assets/img/sidebar.png" alt=""></span>
                 </div>
             </div>
 
@@ -256,7 +256,7 @@
 
 
     <div class="flex maxheight maxwidth column absolute"
-        style="background-image: url(/assets/img/medieinstitutet.png); background-size: cover;">
+        style="background-image: url(./assets/img/medieinstitutet.png); background-size: cover;">
 
         <div class="relative maxheight maxwidth flex align-end justify-start">
 
@@ -293,14 +293,14 @@
             <div style="left: 13rem; top: 48rem;" class="s2arrow absolute z1 none" id="s2arrow1" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="gotoscene3()">
 
                 <button class="maxheight maxwidth backtrans border0">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
                 </button>
             </div>
 
             <div style="left: 13rem; bottom: 11rem;" class="s2arrow absolute z1 none" id="scienceroom2" onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="scienceroom2()">
 
                 <button class="maxheight maxwidth backtrans border0">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
                 </button>
             </div>
 
@@ -308,7 +308,7 @@
             <div style="left: 49.5rem; bottom: 9rem;" class="absolute z1 none s2arrow2up" id="s2arrow2">
 
                 <button class="maxheight maxwidth backtrans border0" onmousedown="what.play()" onclick="showelevatorpic()">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipart.png" alt="">
                 </button>
 
 
@@ -317,7 +317,7 @@
             
             <div style="left: 49.5rem; bottom: 9rem;" class="none absolute z1 none s2arrow2up" id="noelevator">
             <button class="maxheight maxwidth backtrans border0" onmousedown="error.play()" onclick="noelevator()">
-                <img class="maxheight maxwidth" src="/assets/img/PinClipart.png" alt="">
+                <img class="maxheight maxwidth" src="./assets/img/PinClipart.png" alt="">
             </button>
             </div>
 
@@ -326,19 +326,19 @@
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="s2arrow3">
                 <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); error.play();" onclick="lockeddoor()">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="closeddoorarrow">
                 <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); scream.play();" onclick="lockeddoortry()">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
 
             <div style="right: 13rem; bottom: 11rem;;" class="s2arrow absolute z1 none" id="unlockeddoorarrow">
                 <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); unlock.play(); squeek.play();" onclick="unlockeddoor()">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
 
@@ -355,13 +355,13 @@
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
                 <div id="gotkey" class="inventorybag none">
-                    <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/key.png" alt="">
                 </div>
 
                 <div id="gotkorg" class="inventorybag none">
-                    <img class="maxheight maxwidth" src="assets/img/korg.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/korg.png" alt="">
                 </div>
             </div>
         </div>
@@ -369,13 +369,13 @@
 
         <div style="display: flex; justify-content: flex-end;">
             <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onmousedown="inventory.play()" onclick="openNav()">
-            <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+            <img style="height: 100%; width: 100%;" src="./assets/img/sidebar.png" alt=""></span>
         </div>
     </div>
 
     <div id="lockeddoorcontainer" class="none fullscreen absolute maxwidth justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
-        <img id="lockeddoor" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/lockeddoor.png" alt="">
-        <img id="unlocked" style=" display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/opendoor.png" alt="">
+        <img id="lockeddoor" style="height: 60rem; width: 80rem; position: absolute;" src="./assets/img/lockeddoor.png" alt="">
+        <img id="unlocked" style=" display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/opendoor.png" alt="">
     
         <div class="relative maxheight maxwidth flex align-end justify-start">
         <div class="flex align-center textbox">
@@ -394,9 +394,9 @@
 
 
     <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
-        <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofat.png" alt="">
-        <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="/assets/img/fatcry.png" alt="">
-        <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/nofatbroken.png" alt="">
+        <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/nofat.png" alt="">
+        <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="./assets/img/fatcry.png" alt="">
+        <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/nofatbroken.png" alt="">
 
 
 
@@ -445,16 +445,16 @@
 
 
     <div class="flex maxheight maxwidth column absolute"
-        style="background-image: url(/assets/img/laboratory.png); background-size: cover;">
+        style="background-image: url(./assets/img/laboratory.png); background-size: cover;">
 
         <div class="relative maxheight maxwidth flex align-end justify-start">
 
              <div id="myNav2" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav2()">&times;</a>
                 <div class="overlay-content">
-                    <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                    <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
                    <div id="gotkey2" class="inventorybag">
-                        <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
+                        <img class="maxheight maxwidth" src=",/assets/img/key.png" alt="">
                     </div>
                 </div>
             </div>
@@ -462,7 +462,7 @@
     
             <div>
                 <span style="cursor: pointer; height: 10rem; width: 4rem; position: absolute; top: 27rem; right: 0;" onmousedown="inventory.play()" onclick="openNav2()">
-                <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                <img style="height: 100%; width: 100%;" src="./assets/img/sidebar.png" alt=""></span>
             </div>
         </div>
 
@@ -471,8 +471,8 @@
 
 
             <div class="flex absolute" style="right: 14rem; bottom: 13rem;">
-                <img style="height: 30rem;" id="bigman" src="assets/img/obeseman.png" alt="bigman">
-                <img class="none" id="sadbigman" style="height: 30rem;" src="assets/img/fatcry.png" alt="sad bigman">
+                <img style="height: 30rem;" id="bigman" src="./assets/img/obeseman.png" alt="bigman">
+                <img class="none" id="sadbigman" style="height: 30rem;" src="./assets/img/fatcry.png" alt="sad bigman">
             </div>
 
 
@@ -494,20 +494,20 @@
 
             <div style="left: 10rem; top: 29rem;" class="s2arrow absolute z1 none" id="s3arrow" onmousedown="scream.play()" onclick="bubblebox()">
                 <button class="maxheight maxwidth backtrans border0">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
                 </button>
             </div>
 
             <div style="right: 6rem; top: 35rem;" class="s2arrow absolute z1 none" id="s3arrow2" onmousedown="labroom.pause(); spooky.play();" onclick="leavescienceroom1()">
                 <button class="maxheight maxwidth backtrans border0">
-                    <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+                    <img class="maxheight maxwidth" src="./assets/img/PinClipartright.png" alt="">
                 </button>
             </div>
    
 
 
             <div id="bubblebox"  class="none absolute" style="top:10rem; left:1rem;">    
-                    <img  style="height: 15rem;" src="/assets/img/chatbubble.png" alt="">
+                    <img  style="height: 15rem;" src="./assets/img/chatbubble.png" alt="">
 
                     <div class="flex align-center bubblebox">
                         <div style="margin: 1rem;">
@@ -534,15 +534,15 @@
 
             <div id="keybox" class="keybox none">
                 <button class="backtrans border0" onmousedown="chest.play()" onclick="openbox()">
-                    <img class="maxwidth maxheight" src="/assets/img/box.png" alt="">
+                    <img class="maxwidth maxheight" src="./assets/img/box.png" alt="">
                 </button>
             </div>
 
 
-            <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
-                <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="/assets/img/insidebox.jpeg" alt="">
+            <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(./assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
+                <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="./assets/img/insidebox.jpeg" alt="">
                 <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onmouseover="bleep.play" onclick="grabkey()">
-                <img id="key" style="height: 15rem; width: 10rem; position: absolute;" src="/assets/img/key.png" alt="">
+                <img id="key" style="height: 15rem; width: 10rem; position: absolute;" src="./assets/img/key.png" alt="">
             </button>
         </div>
 
@@ -561,14 +561,17 @@
     <div style="bottom: 28rem; right: 5rem;" class="s2arrow absolute z1 none" id="leavescienceroom2">
 
         <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); labroom.pause(); spooky.play();" onclick="leavescienceroom2()">
-            <img class="maxheight maxwidth" src="/assets/img/PinClipartright.png" alt="">
+            <img class="maxheight maxwidth" src="./assets/img/PinClipartright.png" alt="">
         </button>
     </div>
 
 
     
 
-
+</div>
+</div>
+</div>
+</div>
 
 <!-- 2ND TIME ENTER SCIENCEROOM END -->
             
@@ -579,10 +582,7 @@
 
 
 
-</div>
-</div>
-</div>
-</div>
+
 <!-- SCENE 3, SCIENCEROOM END-->
 
 <div id="scenefour" class="none">
@@ -596,7 +596,7 @@
 
 
         <div class="flex maxheight maxwidth column absolute"
-            style="background-image: url(/assets/img/kitchen.png); background-size: cover; background-repeat: no-repeat;">
+            style="background-image: url(./assets/img/kitchen.png); background-size: cover; background-repeat: no-repeat;">
 
             <div class="relative maxheight maxwidth flex align-end justify-start">
 
@@ -604,10 +604,10 @@
                     <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()"
                         onclick="closeNav3()">&times;</a>
                     <div class="overlay-content">
-                        <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                        <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
 
                         <div id="gotkorg2" class="inventorybag none">
-                            <img class="maxheight maxwidth" src="assets/img/korg.png" alt="">
+                            <img class="maxheight maxwidth" src="./assets/img/korg.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -617,7 +617,7 @@
                     <span
                         style="cursor: pointer; height: 10rem; width: 4rem; position: absolute; top: 27rem; right: 0;"
                         onmousedown="inventory.play()" onclick="openNav3()">
-                        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                        <img style="height: 100%; width: 100%;" src="./assets/img/sidebar.png" alt=""></span>
                 </div>
             </div>
 
@@ -643,7 +643,7 @@
 
         <div id="fridge" class="fridge none">
             <button class="backtrans border0" onmousedown="chest.play()" onclick="openfridge()">
-                <img class="maxwidth maxheight" src="/assets/img/fridge.png" alt="">
+                <img class="maxwidth maxheight" src="./assets/img/fridge.png" alt="">
             </button>
         </div>
 
@@ -652,8 +652,8 @@
 
 
         <div class="flex absolute" style="left: 45rem; bottom: 6rem;">
-            <img style="height: 40rem;" id="bigman" src="assets/img/obeseman.png" alt="bigman">
-            <img class="none" id="sadbigman" style="height: 30rem;" src="assets/img/fatcry.png"
+            <img style="height: 40rem;" id="bigman" src="./assets/img/obeseman.png" alt="bigman">
+            <img class="none" id="sadbigman" style="height: 30rem;" src="./assets/img/fatcry.png"
                 alt="sad bigman">
         </div>
 
@@ -667,12 +667,12 @@
         <div id="openfridge" class="fullscreen absolute maxwidth none justify-center align-center"
             style="background-image: url(/assets/img/kitchenbackground.png); background-size: cover; z-index: 2;">
             <img id="infridge" style="display: flex; height: 54rem; width: 69rem; position: absolute;"
-                src="/assets/img/openfridge.png" alt="">
-            <img id="korg" style="display: none; height: 20rem; width: 40rem; " src="/assets/img/korg.png"
+                src="./assets/img/openfridge.png" alt="">
+            <img id="korg" style="display: none; height: 20rem; width: 40rem; " src="./assets/img/korg.png"
                 alt="">
 
             <div id="bubblebox2" class="flex absolute" style="top:6rem; left:40rem;">
-                <img style="height: 15rem;" src="/assets/img/chatbubble.png" alt="">
+                <img style="height: 15rem;" src="./assets/img/chatbubble.png" alt="">
 
                 <div id="bubblebox2" class="flex align-center bubblebox">
                     <div style="margin: 1rem;">
@@ -711,7 +711,7 @@
             onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="leavekitchen()">
 
             <button class="maxheight maxwidth backtrans border0">
-                <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
             </button>
         </div>
 
@@ -726,7 +726,7 @@
 
 <!-- SCENE 5 IFRAME -->
 
-<iframe id="scenefive" class="none fullscreen maxwidth game" src="scene5.html" frameborder="0"></iframe>
+<iframe id="scenefive" class="none fullscreen maxwidth game" src="./scene5.html" frameborder="0"></iframe>
 
     </main>
 
@@ -735,8 +735,8 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="audio.js"></script>
-    <script src="main.js"></script>
+    <script src="./audio.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 
