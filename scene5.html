@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="mainmenu.css">
-    <link rel="stylesheet" href="scene1.css">
-    <link rel="stylesheet" href="scene2.css">
-    <link rel="stylesheet" href="reusable.css">
+    <link rel="stylesheet" href="./animations.css">
+    <link rel="stylesheet" href="./mainmenu.css">
+    <link rel="stylesheet" href="./scene1.css">
+    <link rel="stylesheet" href="./scene2.css">
+    <link rel="stylesheet" href="./reusable.css">
 
 
 
@@ -33,7 +33,7 @@
             
             
                 <div class="flex maxheight maxwidth column absolute"
-                    style="background-image: url(/assets/img/medieinstitutet.png); background-size: cover;">
+                    style="background-image: url(./assets/img/medieinstitutet.png); background-size: cover;">
             
                     <div class="relative maxheight maxwidth flex align-end justify-start">
             
@@ -44,13 +44,13 @@
                     <div id="myNav" class="overlay">
                         <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
                         <div class="overlay-content">
-                            <img style="width: 17rem; height: 40rem;" src="/assets/img/inventory.png" alt="">
+                            <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
                             <div id="gotkey" class="inventorybag none">
-                                <img class="maxheight maxwidth" src="assets/img/key.png" alt="">
+                                <img class="maxheight maxwidth" src="./assets/img/key.png" alt="">
                             </div>
             
                             <div id="gotkorg" class="inventorybag none">
-                                <img class="maxheight maxwidth" src="assets/img/korg.png" alt="">
+                                <img class="maxheight maxwidth" src="./assets/img/korg.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
             
                     <div style="display: flex; justify-content: flex-end;">
                         <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onmousedown="inventory.play()" onclick="openNav()">
-                        <img style="height: 100%; width: 100%;" src="/assets/img/sidebar.png" alt=""></span>
+                        <img style="height: 100%; width: 100%;" src="./assets/img/sidebar.png" alt=""></span>
                     </div>
                 </div>
 
@@ -80,25 +80,25 @@
             
 
                 <div id="bigmaninmainroom" class="flex absolute" style="right: 20rem; bottom: 5rem;">
-                    <img style="height: 20rem;"  src="assets/img/obeseman.png" >
+                    <img style="height: 20rem;"  src="./assets/img/obeseman.png" >
                 </div>
 
-                <img id="itemofvalue" class="none absolute" style="height: 8rem; width: 18rem; bottom: 4rem; left: 43rem;" src="/assets/img/korg.png"
+                <img id="itemofvalue" class="none absolute" style="height: 8rem; width: 18rem; bottom: 4rem; left: 43rem;" src="./assets/img/korg.png"
                 alt="">
 
                
-                    <img id="slimpotion" class="none backtrans absolute border0" style="height: 20rem; bottom: 5rem; left: 46rem;" src="/assets/img/slimpotion.png" alt="slimpotion">
+                    <img id="slimpotion" class="none backtrans absolute border0" style="height: 20rem; bottom: 5rem; left: 46rem;" src="./assets/img/slimpotion.png" alt="slimpotion">
       
 
             <button id="slimpotionbtn" class="none backtrans absolute border0" style="height: 20rem; bottom: 5rem; left: 46rem;">
-                <img class="maxheight maxwidth" src="/assets/img/slimpotion.png" alt="slimpotion">
+                <img class="maxheight maxwidth" src="./assets/img/slimpotion.png" alt="slimpotion">
             </button>
  
 
                 <div style="bottom: 11rem; left: 13rem;" class="s2arrow absolute z1 flex" id="arrowmeetjanne">
 
                     <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); labroom.pause(); spooky.play();" onclick="meetjanne()">
-                        <img class="maxheight maxwidth" src="/assets/img/PinClipartleft.png" alt="">
+                        <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
                     </button>
                 </div>
             
@@ -106,18 +106,18 @@
 
             
                 <div id="jannecontainer" class="fullscreen absolute maxwidth none justify-center align-center">
-                    <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="/assets/img/janne.png" alt="">
+                    <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/janne.png" alt="">
 
             
 
 
             
             <div id="janne" class="none absolute" style="left: 15rem; bottom: 5rem;">
-                <img style="height: 15rem;" id="jannekemi" src="assets/img/janne.png" alt="janne">
+                <img style="height: 15rem;" id="jannekemi" src="./assets/img/janne.png" alt="janne">
             </div>
             
             <div id="bubblebox3" class="none absolute" style="bottom:16rem; left:26rem;">
-                <img style="height: 15rem;" src="/assets/img/chatbubble.png" alt="">
+                <img style="height: 15rem;" src="./assets/img/chatbubble.png" alt="">
             
                 <div id="bubblebox3" class="flex align-center bubblebox">
                     <div style="margin: 1rem;">
@@ -173,8 +173,8 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="audio.js"></script>
-    <script src="main.js"></script>
+    <script src="./audio.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 

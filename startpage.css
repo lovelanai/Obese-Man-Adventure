@@ -11,7 +11,7 @@ body {
 
 @font-face {
     font-family: pixel;
-    src: url(/font/PressStart2P.ttf);
+    src: url(./font/PressStart2P.ttf);
 }
 
 header {
