@@ -373,7 +373,7 @@
         </div>
     </div>
 
-    <div id="lockeddoorcontainer" class="none fullscreen absolute maxwidth justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
+    <div id="lockeddoorcontainer" class="none fullscreen absolute maxwidth justify-center align-center" style="background-image: url(./assets/img/mediebackground.png); background-size: cover; z-index: 2;">
         <img id="lockeddoor" style="height: 60rem; width: 80rem; position: absolute;" src="./assets/img/lockeddoor.png" alt="">
         <img id="unlocked" style=" display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/opendoor.png" alt="">
     
@@ -382,9 +382,9 @@
         <div style="margin: 1rem;">
             <span id="textlockeddoor" class="type" style="--n:103"></span>
         </div>
-        <button id="lockeddoorbtn" class="absolute z1" onmousedown="clicksound.play(); spooky.pause()" onclick="lockeddoorclose()"
+        <button id="lockeddoorbtn" class="absolute z1" onmousedown="clicksound.play()" onclick="lockeddoorclose()"
             style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
-            <button id="unlockeddoorbtn" class=" none absolute z1" onmousedown="clicksound.play(); spooky.pause()" onclick="enterkitchen()"
+            <button id="unlockeddoorbtn" class=" none absolute z1" onmousedown="clicksound.play(); kitchen.play(); spooky.pause()" onclick="enterkitchen()"
             style=" margin: 33rem; margin-top: 42rem">ENTER-></button>
     </div>
     </div>
@@ -393,7 +393,7 @@
 
 
 
-    <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(/assets/img/mediebackground.png); background-size: cover; z-index: 2;">
+    <div id="elevatorpic" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(./assets/img/mediebackground.png); background-size: cover; z-index: 2;">
         <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/nofat.png" alt="">
         <img id="fatcry" style="display: none; height: 88rem; width: 47rem; position: absolute; bottom: -40rem;right: 10rem;" src="./assets/img/fatcry.png" alt="">
         <img id="brokenframe" class="shake" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="./assets/img/nofatbroken.png" alt="">
@@ -406,7 +406,7 @@
             <span id="text2" class="type" style="--n:200"></span>
         </div>
 
-        <button id="changepicturebtn" class="absolute z1" onmousedown="clicksound.play(); kick.play();" onclick="changepicture()"
+        <button id="changepicturebtn" class="absolute z1" onmousedown="clicksound.play();" onclick="changepicture()"
             style=" bottom: 20px; right: 20px">NEXT-></button>
 
             <button id="changepicture2" class="none absolute z1" onmousedown="clicksound.play()" onclick="changepicture2()"
@@ -454,7 +454,7 @@
                 <div class="overlay-content">
                     <img style="width: 17rem; height: 40rem;" src="./assets/img/inventory.png" alt="">
                    <div id="gotkey2" class="inventorybag">
-                        <img class="maxheight maxwidth" src=",/assets/img/key.png" alt="">
+                        <img class="maxheight maxwidth" src="./assets/img/key.png" alt="">
                     </div>
                 </div>
             </div>
@@ -533,7 +533,7 @@
             <!-- 2ND TIME ENTER SCIENCEROOM -->
 
             <div id="keybox" class="keybox none">
-                <button class="backtrans border0" onmousedown="chest.play()" onclick="openbox()">
+                <button class="backtrans border0" onmousedown="chest.play(); labroom.pause();" onclick="openbox()">
                     <img class="maxwidth maxheight" src="./assets/img/box.png" alt="">
                 </button>
             </div>
@@ -541,7 +541,7 @@
 
             <div id="showboxcontent" class="fullscreen absolute maxwidth none justify-center align-center" style="background-image: url(./assets/img/laboratorybackground.png); background-size: cover; z-index: 2;">
                 <img id="insidebox" style="height: 60rem; width: 80rem; position: absolute;" src="./assets/img/insidebox.jpeg" alt="">
-                <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onmouseover="bleep.play" onclick="grabkey()">
+                <button class="border0 backtrans absolute" style="top: 26rem; left: 48rem;" onmousedown="bleep.play(); labroom.play();" onclick="grabkey()">
                 <img id="key" style="height: 15rem; width: 10rem; position: absolute;" src="./assets/img/key.png" alt="">
             </button>
         </div>
@@ -630,7 +630,7 @@
 
 
 
-                    <button id="4btn1" class="none absolute z1" onmousedown="clicksound.play(); kick.play();"
+                    <button id="4btn1" class="none absolute z1" onmousedown="clicksound.play()"
                         onclick="next41()" style=" bottom: 20px; right: 20px">NEXT-></button>
 
                     <button id="4btn2" class="none absolute z1" onmousedown="clicksound.play()"
@@ -642,7 +642,7 @@
 
 
         <div id="fridge" class="fridge none">
-            <button class="backtrans border0" onmousedown="chest.play()" onclick="openfridge()">
+            <button class="backtrans border0" onmousedown="fredrik.play()" onclick="openfridge()">
                 <img class="maxwidth maxheight" src="./assets/img/fridge.png" alt="">
             </button>
         </div>
@@ -665,7 +665,7 @@
 
 
         <div id="openfridge" class="fullscreen absolute maxwidth none justify-center align-center"
-            style="background-image: url(/assets/img/kitchenbackground.png); background-size: cover; z-index: 2;">
+            style="background-image: url(./assets/img/kitchenbackground.png); background-size: cover; z-index: 2;">
             <img id="infridge" style="display: flex; height: 54rem; width: 69rem; position: absolute;"
                 src="./assets/img/openfridge.png" alt="">
             <img id="korg" style="display: none; height: 20rem; width: 40rem; " src="./assets/img/korg.png"
@@ -678,11 +678,11 @@
                     <div style="margin: 1rem;">
                         <span id="text4" class="bubble" style="--n:103;"></span>
                     </div>
-                    <button id="fridgebtn1" class="absolute z1" onmousedown="clicksound.play(); what.play();"
+                    <button id="fridgebtn1" class="absolute z1" onmousedown="clicksound.play()"
                         onclick="bubble42()" style="top:7.5rem; left: 21rem;">NEXT-></button>
 
                     <button id="fridgebtn2" class="none absolute z1"
-                        onmousedown="clicksound.play(); what.play();" onclick="bubble43()"
+                        onmousedown="clicksound.play(); chest.play(); kitchen.pause();" onclick="bubble43()"
                         style="top:7.5rem; left: 21rem;">CLOSE-></button>
 
                 </div>
@@ -700,7 +700,7 @@
                     <span id="text4" class="type" style="--n:200"></span>
                 </div>
 
-                <button id="4btn3" class="absolute z1" onmousedown="clicksound.play(); kick.play();"
+                <button id="4btn3" class="absolute z1" onmousedown="clicksound.play(); kitchen.play()"
                     onclick="closekorg()" style=" bottom: 20px; right: 20px">NEXT-></button>
 
             </div>
@@ -708,7 +708,7 @@
         </div>
 
         <div style="left: 6rem; top: 31rem;" class="s2arrow absolute z1 none" id="leavekitchen"
-            onmousedown="spooky.pause();hit.play(); labroom.play();" onclick="leavekitchen()">
+            onmousedown="final.play(); kitchen.pause(); spooky.pause(); hit.play();" onclick="leavekitchen()">
 
             <button class="maxheight maxwidth backtrans border0">
                 <img class="maxheight maxwidth" src="./assets/img/PinClipartleft.png" alt="">
@@ -726,7 +726,10 @@
 
 <!-- SCENE 5 IFRAME -->
 
-<iframe id="scenefive" class="none fullscreen maxwidth game" src="./scene5.html" frameborder="0"></iframe>
+<iframe id="scenefive" class="none fullscreen maxwidth game" src="./game2.html" frameborder="0"></iframe>
+
+
+
 
     </main>
 

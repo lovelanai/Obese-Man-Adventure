@@ -28,6 +28,7 @@ header {
     align-items: center;
     color: rgba(255, 166, 0, 0);
     -webkit-background-clip: text;
+    background-clip: text;
     background-size: 3%;
     font-size: 25px;
 }

@@ -403,8 +403,7 @@ function closekeytext(){
 function leavescienceroom2(){
   document.getElementById('scenetwo').style.display = "flex";
   document.getElementById('scenethree').style.display = "none";
-   var myobj = document.getElementById("leavescienceroom");
-  myobj.remove();
+
 
 
 }
@@ -452,7 +451,7 @@ function unlockeddoor(){
 
 
 
-function changetext4(text) {
+function changetext4(text) { 
   const paragraph = document.getElementById("text4")
   paragraph.innerText = text;
 }
@@ -495,6 +494,8 @@ function next42(){
 
 function openfridge(){
   document.getElementById('openfridge').style.display = "flex";
+  var myobj = document.getElementById("fridge");
+  myobj.remove();
   changetext4("YO YO! YOU FOUND ME! I'M FREDRIK!")
 }
 
@@ -557,6 +558,10 @@ function changetext5(text) {
   const paragraph = document.getElementById("text5")
   paragraph.innerText = text;
 }
+function changetext6(text) {
+  const paragraph = document.getElementById("text6")
+  paragraph.innerText = text;
+}
 
 function meetjanne(){
   document.getElementById('jannecontainer').style.display = "flex";
@@ -601,15 +606,51 @@ function jannetext2(){
   myobj.remove();
 }
 
+
+
 function jannetext3(){
+
   document.getElementById('slimpotion').style.display = "flex";
+ 
+
   var myobj = document.getElementById("jannecontainer");
   myobj.remove();
-  var myobj = document.getElementById("jannetext1");
-  myobj.remove();
 
 
-  
+ document.getElementById('afterjanne').style.display = "flex";
+ 
+ document.getElementById('afterjannetext').style.display = "flex"; 
+
+ changetext6("NICEEE! WE GOT THE SLIMPOTION! WE CAN FINALLY GET UPSTAIRS AND FACE MC.DAVID!!!!... BOTTOMS UP!!!...")
 }
 
+function showbottle(){
+
+  document.getElementById('slimpotionbtn').style.display = "flex"; 
+
+  var myobj = document.getElementById("afterjanne");
+  myobj.remove();
+
+}
+
+
+function endgame(){
+  document.getElementById('buyfullgame').style.display = "flex";
+}
+
+$(document).ready(function () {
+  var target = $("#scene5");
+  $("#slimpotionbtn").click(function () {
+    removeElement(target);
+  });
+
+});
+
+function removeElement(target) {
+  target.animate({
+    opacity: "-=1"
+  }, 1000, function () {
+    target.remove();
+  });
+}
 
