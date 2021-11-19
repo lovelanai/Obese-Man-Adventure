@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: pixel;
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(../font/PressStart2P.ttf);
+}
+
+
+.start-logo {
+    margin: 3rem;
+    font-size: 50px;
+    border: none;
+    background-color: transparent;
+}
+
+.text-color-effect {
+    background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+    color: rgba(0, 128, 0, 0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: animate 5s linear infinite;
+    background-size: 1000%;
+}
+
+
+.start-coin {
+    color: tomato;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    -webkit-animation: blink-text 1000ms linear infinite;
+    -moz-animation: blink-text 1000ms linear infinite;
+    -ms-animation: blink-text 1000ms linear infinite;
+    -o-animation: blink-text 1000ms linear infinite;
+    animation: blink-text 1000ms linear infinite;
+}
+
+button:hover {
+    filter: invert();
+    border-collapse: separate;
+    cursor: pointer;
+    -webkit-animation: blink-text 800ms linear infinite;
+    -moz-animation: blink-text 800ms linear infinite;
+    -ms-animation: blink-text 800ms linear infinite;
+    -o-animation: blink-text 800ms linear infinite;
+    animation: blink-text 800ms linear infinite;
+}
+
+
+
+.gamemenu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/img/background.jpg);
+    background-repeat: repeat;
+}
+
+.logo {
+    background-image: url(https://previews.123rf.com/images/pskov/pskov1711/pskov171100040/90065725-pixel-art-dithering-background-in-red-and-orange-color-.jpg);
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 166, 0, 0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 3%;
+    font-size: 25px;
+}
+
+.beginbtn {
+    width: 40rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+    animation: animate 5s linear infinite;
+    background-size: 1000%;
+}
+
+.nameinput{
+ 
+    height: 2rem;
+    width: 20rem;
+    border: 7px solid #FF8220;
+}
+
+
