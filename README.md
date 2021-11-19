@@ -18,7 +18,7 @@ Pull requests are always fun. For major changes, please open an issue first to d
 
 
 ## Demo link
-https://lovelanai.github.io/game/
+[OBESE-MAN-ADVENTURE DEMO](https://lovelanai.github.io/game/)
 
 ## License
 
