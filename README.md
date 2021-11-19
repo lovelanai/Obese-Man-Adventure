@@ -17,6 +17,9 @@ Game written and created by Love Lanai
 Pull requests are always fun. For major changes, please open an issue first to discuss what you would like to change.
 
 
+## Demo link
+https://lovelanai.github.io/game/
+
 ## License
 
 Some, if not all audio are NOT owned or created by me. So do NOT use this game for commercial  purposes in any instance. 
