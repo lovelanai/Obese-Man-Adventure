@@ -1,0 +1,61 @@
+.typewriter {
+    border-right: solid 2px rgba(0, 0, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    animation: animated-text 3s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
+}
+
+.type {
+    font-size: 22px;
+    color: #0000;
+    background: linear-gradient(-90deg, #FF7E00 5px, #0000 0) 10px 0, linear-gradient(#ffffff 0 0) 0 0;
+    background-size: calc(var(--n)*1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation: b .3s infinite steps(1), t calc(var(--n)*.05s) steps(var(--n)) forwards;
+}
+
+
+
+.overlaydemo{
+    height: 40rem;
+    width: 17rem;
+    position: absolute;
+    z-index: 2;
+    right: -20rem;
+    background-color:transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+    -webkit-animation: actiondemo 1.5s infinite alternate;
+    animation: actiondemo 1.5s infinite alternate;
+}
+
+.overlaydemo a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlaydemo .closebtn {
+
+    position: absolute;
+    top: 9px;
+    right: 206px;
+    font-size: 40px;
+    color: #FF7E00;
+}
+
+
+
+.textbox {
+    margin: 4rem ;
+    height: 12rem; 
+    width: 40rem; 
+    background-color: rgba(0, 0, 0, 0.815);  
+}

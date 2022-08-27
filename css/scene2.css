@@ -1,0 +1,108 @@
+.bubble {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(-90deg, #FF7E00 5px, rgba(255, 255, 255, 0) 0) 10px 0, linear-gradient(#000000 0 0) 0 0;
+    background-size: calc(var(--n)*1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation: b .3s infinite steps(1), t calc(var(--n)*.05s) steps(var(--n)) forwards;
+}
+
+.bubblebox {
+    height: 10rem; 
+    width: 30rem; 
+    position: absolute;
+    left: 1rem;
+    background-color: transparent;  
+}
+
+.arrow {
+    -webkit-animation: actionup .3s infinite alternate;
+    animation: actionup .3s infinite alternate;
+    height: 8rem;
+    width: 6rem;
+    margin-left: 40rem;
+    margin-bottom: 6rem;
+}
+
+.s2arrow {
+    -webkit-animation: action .3s infinite alternate;
+    animation: action .3s infinite alternate;
+    height: 6rem;
+    width: 8rem;
+}
+
+.s2arrow2up{
+    -webkit-animation: actionup .3s infinite alternate;
+    animation: actionup .3s infinite alternate;
+    height: 8rem;
+    width: 6rem;
+
+}
+
+.overlay {
+    height: 40rem;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 14rem;
+    right: 0;
+    background-color:transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+}
+
+
+
+.overlay .closebtn {
+
+    position: absolute;
+    top: 9px;
+    right: 206px;
+    font-size: 40px;
+    color: #FF7E00;
+}
+
+
+
+
+.shake{
+    animation: shake 0.2s;
+    animation-iteration-count: 10s;
+  }
+
+
+  .keybox{
+
+    position: absolute;
+    height: 10rem;
+    left: 48rem;
+    bottom: 35rem;
+}
+
+
+.inventorybag{
+    position: absolute;
+    height: 5rem;
+    width: 4.6rem;
+    top: 11rem;
+    left: 2.3rem;
+}
+
+.fridge{
+    position: absolute;
+    height: 41rem;
+    right: 9rem;
+    bottom: 9rem;
+}
+

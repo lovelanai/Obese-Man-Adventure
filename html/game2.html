@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/mainmenu.css">
+    <link rel="stylesheet" href="../css/scene1.css">
+    <link rel="stylesheet" href="../css/scene2.css">
+    <link rel="stylesheet" href="../css/reusable.css">
+
+
+
+</head>
+
+<body>
+
+
+    <main id="gamefullscreen">
+
+
+
+
+        <div id="scene5">
+
+            
+            
+            
+            <div id="scene5fullscreen" class="column flex fullscreen justify-center align-center backblack">
+            
+                <div style="position: absolute; top: 0; z-index: 20;"><button style="background-color: red; "  onclick="openFullscreen()">RETURN TO FULLSCREEN</button></div>
+            
+            
+            
+                <div  class="flex maxheight maxwidth column absolute"
+                    style="background-image: url(../assets/img/medieinstitutet.png); background-size: cover;">
+            
+                    <div class="relative maxheight maxwidth flex align-end justify-start">
+            
+                     
+            
+            
+            
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onmousedown="inventory.play()" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <img style="width: 17rem; height: 40rem;" src="../assets/img/inventory.png" alt="">
+                            <div id="gotkey" class="inventorybag none">
+                                <img class="maxheight maxwidth" src="../assets/img/key.png" alt="">
+                            </div>
+            
+                            <div id="gotkorg" class="inventorybag none">
+                                <img class="maxheight maxwidth" src="../assets/img/korg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                    <div style="display: flex; justify-content: flex-end;">
+                        <span style="cursor: pointer; height:10rem; width: 4rem; position: absolute; top: 29rem;" onmousedown="inventory.play()" onclick="openNav()">
+                        <img style="height: 100%; width: 100%;" src="../assets/img/sidebar.png" alt=""></span>
+                    </div>
+                </div>
+
+
+                <div class="relative maxheight maxwidth none align-end justify-start">
+
+             
+    
+    
+    
+                        <button id="4btn1" class="none absolute z1" onmousedown="clicksound.play(); kick.play();"
+                            onclick="next41()" style=" bottom: 20px; right: 20px">NEXT-></button>
+    
+                        <button id="4btn2" class="none absolute z1" onmousedown="clicksound.play()"
+                            onclick="next42()" style=" bottom: 20px; right: 20px">CLOSE-></button>
+                    </div>
+    
+                </div>
+            
+
+                <div id="bigmaninmainroom" class="flex absolute" style="right: 20rem; bottom: 5rem;">
+                    <img style="height: 20rem;"  src="../assets/img/obeseman.png" >
+                </div>
+
+                <img id="itemofvalue" class="none absolute" style="height: 8rem; width: 18rem; bottom: 4rem; left: 43rem;" src="../assets/img/korg.png"
+                alt="">
+
+               
+                    <img id="slimpotion" class="none backtrans absolute border0" style="height: 20rem; bottom: 5rem; left: 46rem;" src="../assets/img/slimpotion.png" alt="slimpotion">
+      
+
+            <button id="slimpotionbtn" class="none backtrans absolute border0" style="height: 20rem; bottom: 5rem; left: 46rem;">
+                <img class="maxheight maxwidth" src="../assets/img/slimpotion.png" alt="slimpotion" onmousedown="downsound.play();" onclick="endgame()">
+            </button>
+ 
+
+                <div style="bottom: 11rem; left: 13rem;" class="s2arrow absolute z1 flex" id="arrowmeetjanne">
+
+                    <button class="maxheight maxwidth backtrans border0" onmousedown="clicksound.play(); scream.play();" onclick="meetjanne()">
+                        <img class="maxheight maxwidth" src="../assets/img/PinClipartleft.png" alt="">
+                    </button>
+                </div>
+
+                <div id="afterjanne" class="relative maxheight maxwidth none align-end justify-start">
+
+                    <div id="afterjannetext" class="none align-center textbox">
+                        <div style="margin: 1rem;">
+                            <span id="text6" class="type" style="--n:103"></span>
+                        </div>
+                        <button class="absolute z1" onmousedown="clicksound.play()" onclick="showbottle()"
+                            style=" margin: 33rem; margin-top: 42rem">CLOSE-></button>
+                    </div>
+                </div>
+        
+
+            
+                <div id="jannecontainer" class="fullscreen absolute maxwidth none justify-center align-center">
+                    <img id="changepicture" style="display: none; height: 60rem; width: 80rem; position: absolute;" src="../assets/img/janne.png" alt="">
+
+            
+
+
+            
+            <div id="janne" class="none absolute" style="left: 15rem; bottom: 5rem;">
+                <img style="height: 15rem;" id="jannekemi" src="../assets/img/janne.png" alt="janne">
+            </div>
+            
+            <div id="bubblebox3" class="none absolute" style="bottom:16rem; left:26rem;">
+                <img style="height: 15rem;" src="../assets/img/chatbubble.png" alt="">
+            
+                <div id="bubblebox3" class="flex align-center bubblebox">
+                    <div style="margin: 1rem;">
+                        <span id="text5" class="bubble" style="--n:103;"></span>
+                    </div>
+                    
+                    <button id="janneinfo" class="flex absolute z1" onclick="janneinfo()"
+                    onmousedown="clicksound.play(); mmm.play();" 
+                    style="top:7.5rem; left: 21rem;">NEXT-></button>
+
+                    <button id="jannetext1" class="none absolute z1" onmousedown="clicksound.play(); kick.play();" onclick="jannetext1()"
+                        style="top:7.5rem; left: 21rem;">NEXT-></button>
+
+
+            
+                    <button id="jannetext2" class="none absolute z1" onclick="jannetext2()"
+                        onmousedown="clicksound.play(); inventory.play();" 
+                        style="top:7.5rem; left: 21rem;">NEXT-></button>
+
+                        <button id="jannetext3" class="none absolute z1" onclick="jannetext3()"
+                        onmousedown="magicstart.play(); omg.play();" 
+                        style="top:7.5rem; left: 21rem;">CLOSE-></button>
+            
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            </div>
+            
+            
+
+            </div>
+            
+
+
+
+
+            
+            
+            
+            
+            
+
+            </div>
+    
+</div>
+
+
+
+
+<!-- END OF GAME -->
+<div id="buyfullgame" class="none container">
+    <button onmousedown="bleep.play()" class="start-logo">
+        <a class="start-logo, text-color-effect">END OF DEMO</a></button>
+    <div>
+        <p class="start-coin">BUY FULL GAME TO CONTINUE</p>
+    </div>
+
+</div>
+<!-- END OF GAME -->
+
+
+
+
+    </main>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/audio.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
